@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="palette.model">
+
+<!-- 
+    ${repo}${autobuild.svn.tags-prefix}/tags${autobuild.svn.tags-suffix}/${autobuild.svn.tagname-base}-x.y.z.nnn/${autobuild.svn.tag-pattern}
+
+   ${repo}                        = bw
+   ${autobuild.svn.tags-prefix}   = <empty>
+   ${autobuild.svn.tags-suffix}   = /bw/{release-unit folder structure as in svn}
+   ${autobuild.svn.tagname-base}  = {two(or three) part release-unit name}
+   ${autobuild.svn.tag-pattern}   = {folder name as in svn, under which release-unit exists}
+   
+   Ex:
+   bw/tags/bw/palette/model/palette.model-6.0.0.001/model
+ -->
+
+    <property name="release-unit" value="palette.model" />
+    <property name="feature" value="com.tibco.bw.palette.clarity.model.feature" />
+    <property name="autobuild.repository" value="amxext" />
+    <property name="autobuild.svn.tagname-base" value="clarity.bwplugin.ru" />
+    <property name="autobuild.svn.tags-suffix" value="/bwplugin/clarity.palette.model" />
+    <!--property name="autobuild.svn.tag-pattern" value="model" /-->
+
+    <property name="autobuild.version.eclipse" value="4.4" />
+    <property name="autobuild.version.developer.eclipse" value="4.4" />
+    <property name="autobuild.p2.packaging" value="true" />    <!--want P2 package, used for eclipse P2 installation-->
+
+    <property name="autobuild.workspace.extra-feature" location="extrafeature.xml"/>
+
+    <property name="autobuild.obfuscator.style" value="package"/>
+    <property name="site.type" value="release"/>
+    <property name="reldist.download.enable" value="true"/>
+
+    <updatesites id="autobuild.workspace.update-sites.list">
+	<updatesite url="http://spin.tibco.com:8008/dev/release/"/> 
+    </updatesites>
+    <property name="official-release-build" value="true" />
+</project>

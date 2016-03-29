@@ -1,0 +1,4 @@
+<includes>
+	<include file="bwpluginclarityce_runtime.xml" />	
+	<include file="bwpluginclarityce_samples.xml" />
+</includes>

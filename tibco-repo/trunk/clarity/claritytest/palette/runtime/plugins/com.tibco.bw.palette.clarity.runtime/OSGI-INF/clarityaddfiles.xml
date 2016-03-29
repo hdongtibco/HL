@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" factory="com.tibco.bw.palette.clarity.model.clarity.ClarityAddFiles" name="bw.clarity.ClarityAddFiles">
+   <implementation class="com.tibco.bw.palette.clarity.runtime.ClarityAddFilesActivity"/>
+   <property name="activityTypeID" type="String" value="bw.clarity.ClarityAddFiles"/>
+   <property name="modelPackageClass" type="String" value="com.tibco.bw.palette.clarity.model.clarity.ClarityPackage"/>
+   <property name="runtimeClass" type="String" value="com.tibco.bw.palette.clarity.runtime.ClarityAddFilesActivity"/>
+</scr:component>

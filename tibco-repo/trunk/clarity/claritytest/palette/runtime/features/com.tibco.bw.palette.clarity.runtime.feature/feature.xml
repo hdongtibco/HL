@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="com.tibco.bw.palette.clarity.runtime.feature"
+      label="%featureName"
+      version="6.0.0.qualifier"
+      provider-name="%providerName">
+
+   <description>
+      %description
+   </description>
+
+   <copyright>
+      %copyright
+   </copyright>
+
+   <license url="%licenseURL">
+      %license
+   </license>
+
+   <requires>
+      <import feature="com.tibco.bw.api.runtime.feature" version="6.3.0" match="compatible"/>
+      <import feature="com.tibco.bw.platformservices.feature" version="6.3.0" match="compatible"/>
+      <import feature="com.tibco.bw.api.palette.shared.feature" version="6.2.0" match="compatible"/>
+      <import feature="com.tibco.bw.palette.clarity.model.feature" version="6.0.0" match="compatible"/>
+      <import feature="com.tibco.bw.sharedresource.clarity.runtime.feature" version="6.0.0" match="compatible"/>
+      <import feature="com.tibco.tpcl.org.apache.commons.io.feature" version="1.2.100" match="compatible"/>
+   </requires>
+
+<!--
+      <import feature="com.tibco.tpcl.org.genxdm.core.feature" version="1.2.0" match="compatible"/>
+      <import feature="com.tibco.tpcl.javax.mail.feature" version="1.10.0" match="compatible"/>
+
+      <import feature="com.tibco.genxdm.extras.feature" version="1.2.0" match="compatible"/>
+      <import feature="com.tibco.genxdm.processor.xslt.feature" version="1.2.0" match="compatible"/>
+      <import feature="com.tibco.genxdm.bridge.xinode.feature" version="1.2.0" match="compatible"/>
+
+      <import feature="com.tibco.neo.common.util.feature" version="2.5.100" match="compatible"/>
+      <import feature="com.tibco.amx.tibrv.client.feature" version="8.4.200" match="compatible"/>
+      <import feature="com.tibco.tibcoxml.xml" version="5.60.100" match="compatible"/>
+      <import feature="com.tibco.tibcoxml.util" version="5.60.100" match="compatible"/>
+      <import feature="com.tibco.tpcl.org.jvnet.annox.feature" version="0.4.100.001" match="compatible"/>
+      <import feature="com.tibco.tpcl.javax.xml.bind.feature" version="2.10.0" match="compatible"/>
+      <import feature="com.tibco.tpcl.org.eclipse.bpel.feature.rt" version="1.10.0" match="compatible"/>
+      <import feature="com.tibco.tpcl.org.apache.commons.pool.feature" version="1.6.0" match="compatible"/>
+-->
+
+   <plugin
+         id="com.tibco.bw.palette.clarity.runtime"
+         download-size="0"
+         install-size="0"
+         version="6.0.0.qualifier"
+         unpack="false"/>
+
+</feature>

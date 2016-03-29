@@ -1,0 +1,21 @@
+<project name="ec_client_call" basedir=".">
+<import file="ec_client_call_common.xml"/>
+
+<target name="package" depends="setConditions,setwin,setlnx,setmac,-testClientExistence,-getClients" >
+	<echo> ostype ${ostype} </echo>
+	<antcall target="login" />
+    
+	<FULL-formal-installpackaging-procedure 
+					enable-zipassembly-creation="true" 
+					featureconfig-file="product_bwpluginclarity-ce_6.0.0_FeatureConfig.xml" 
+					svn-url="https://svn.tibco.com/svn/amxext/trunk/clarity/bw6-plugin/pkg_info/bom/6.0.0/ce" 
+					svn-revision="HEAD" recipient-email-address="mqian@tibco.com" 
+					assembly-id="all" 
+					set-environment-variables="bldsrcdir=/local/relbuild/bwpluginclarity-ce_600/bw6-plugin" 
+					override-default-export-dir="/local/tibco/export_dir" 
+					ports="all"/>
+
+	<echo> Please see status of job at https://commander.na.tibco.com:5443/commander/jobs.php </echo>
+</target>
+</project>
+

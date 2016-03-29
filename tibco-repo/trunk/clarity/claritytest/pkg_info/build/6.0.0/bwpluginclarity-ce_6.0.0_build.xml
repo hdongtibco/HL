@@ -1,0 +1,15 @@
+<project name="ec_client_call" basedir=".">
+    <!-- template for calling EC procedures -->
+    <!-- Instructions for use -->
+    <import file="bwpluginclarity.xml"/>
+
+    
+    <target name="package" depends="setConditions,setwin,setlnx,setmac,-testClientExistence,-getClients" >
+	<echo> ostype ${ostype} </echo>
+	<antcall target="login" />
+
+	<bwpluginclarity-ce-test-build-packaging build-number="1" product-version="6.0.0" svn-src="https://svn.tibco.com/svn/amxext/trunk/clarity/bw6-plugin"/>
+
+</target>
+
+</project>

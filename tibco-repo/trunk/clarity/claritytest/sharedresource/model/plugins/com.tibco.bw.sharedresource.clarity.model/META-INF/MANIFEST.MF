@@ -1,0 +1,32 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: com.tibco.bw.sharedresource.clarity.model;singleton:=true
+Bundle-Version: 6.0.0.qualifier
+Bundle-ClassPath: .
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ActivationPolicy: lazy
+Export-Package: com.tibco.bw.sharedresource.clarity.model.clarityconnection,
+ com.tibco.bw.sharedresource.clarity.model.clarityconnection.impl,
+ com.tibco.bw.sharedresource.clarity.model.clarityconnection.util
+Import-Package: com.tibco.amf.model.sharedresource.jndi;version="[1.901.0,2.0.0)",
+ com.tibco.amf.model.sharedresource.jndi.util;version="[1.901.0,2.0.0)",
+ com.tibco.bw.model.activityconfig;version="[6.3.0,7.0.0)",
+ com.tibco.neo.localized;version="[2.5.100,3.0.0)",
+ com.tibco.neo.svar.svarmodel;version="[2.901.0,3.0.0)",
+ com.tibco.neo.svar.svarmodel.impl;version="[2.901.0,3.0.0)",
+ org.eclipse.emf.common;version="[0.0.0,3.0.0)",
+ org.eclipse.emf.common.notify;version="[0.0.0,3.0.0)",
+ org.eclipse.emf.common.notify.impl;version="[0.0.0,3.0.0)",
+ org.eclipse.emf.common.util;version="[0.0.0,3.0.0)",
+ org.eclipse.emf.ecore;version="[0.0.0,3.0.0)",
+ org.eclipse.emf.ecore.impl;version="[0.0.0,3.0.0)",
+ org.eclipse.emf.ecore.plugin;version="[0.0.0,3.0.0)",
+ org.eclipse.emf.ecore.util;version="[0.0.0,3.0.0)",
+ org.eclipse.osgi.util;version="[1.1.0,2.0.0)",
+ org.jdom;version="[1.0.200,2.0.0)",
+ org.jdom.input;version="[1.0.200,2.0.0)"
+Provide-Capability: com.tibco.bw.sharedresource.model; name=bw.clarity
+

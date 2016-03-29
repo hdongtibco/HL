@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.tibco.bw.sharedresource.clarity.model/src"
+    modelPluginID="com.tibco.bw.sharedresource.clarity.model" modelName="ClarityConnection"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0" copyrightFields="false"
+    usedGenPackages="platform:/plugin/com.tibco.neo.model.core.eclipse/model/SvarModel.genmodel#//svarmodel platform:/plugin/com.tibco.neo.model.core.eclipse/model/ComponentJar.genmodel#//componentjar">
+  <foreignModel>clarityconnection.ecore</foreignModel>
+  <genPackages prefix="ClarityConnection" basePackage="com.tibco.bw.sharedresource.clarity.model"
+      disposableProviderFactory="true" ecorePackage="clarityconnection.ecore#/">
+    <genClasses ecoreClass="clarityconnection.ecore#//ClarityConnection">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute clarityconnection.ecore#//ClarityConnection/serverURL"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute clarityconnection.ecore#//ClarityConnection/userName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute clarityconnection.ecore#//ClarityConnection/password"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

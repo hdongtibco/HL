@@ -1,0 +1,2 @@
+BASELINE::BW Clarity plugin 6.0.0 V16
+

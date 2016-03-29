@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.tibco.bw.palette.clarity.model/src" modelPluginID="com.tibco.bw.palette.clarity.model"
+    importerID="org.eclipse.emf.importer.ecore" bundleManifest="false" complianceLevel="6.0"
+    copyrightFields="false" runtimeVersion="2.4">
+  <genPackages prefix="Clarity" basePackage="com.tibco.bw.palette.clarity.model" disposableProviderFactory="true"
+      ecorePackage="clarity.activity.ecore#/">
+    <genClasses ecoreClass="clarity.activity.ecore#//StartBatch">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute clarity.activity.ecore#//StartBatch/clarityConnection"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute clarity.activity.ecore#//StartBatch/projectName"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

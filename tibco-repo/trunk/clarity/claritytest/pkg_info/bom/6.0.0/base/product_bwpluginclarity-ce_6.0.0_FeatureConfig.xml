@@ -1,0 +1,156 @@
+<?xml  version="1.0"?>
+<TIBCOInstallerFeatures>
+   <productDef 
+   		name="TIBCO ActiveMatrix BusinessWorks(TM) Plug-in for Clarity 6.0.0" 
+   		version="6.0.0" 
+   		id="bwpluginclarity-ce" 
+   		releaseType="base"    		
+   		supportedPlatforms="linux26gl23/x86_64,win/x86_64,macosx/x86_64"
+   		compatDisplayName="TIBCO ActiveMatrix BusinessWorks(TM) Plug-in for Clarity" 
+   		compatType="bwpluginclarity-ce" 
+		emailalias="mqian@tibco.com"
+   		universalinstallerrelease="3.4.2" 
+   		universalinstallerversion="V1"/>
+	
+	<packagingProperties createp2installer="true" supportedBWVersion="6.3"/>
+	
+    <customVariables>
+        <localVariable name="bwpluginclarity-ce.minimum.bw.version" value="6.3.0"/>
+		<localVariable name="bwpluginclarity-ce.extension.palettes.home" value="${tibco.home.esc}/bw/palettes/clarity/6.0"/>
+		<localVariable name="bwpluginclarity-ce.extension.palettes.runtime.home" value="${tibco.home.esc}/bw/palettes/clarity/6.0/runtime"/>
+		<localVariable name="bwpluginclarity-ce.extension.palettes.design.home" value="${tibco.home.esc}/bw/palettes/clarity/6.0/design"/>
+
+		<localVariable name="bwpluginclarity-ce.palette.full.name" value="TIBCO BW Clarity Palette"/>
+		<localVariable name="bwpluginclarity-ce.palette.short.name" value="clarity"/>
+		<localVariable name="bwpluginclarity-ce.palette.package.name" value="com.tibco.bw.palette"/>
+
+		<localVariable name="bwpluginclarity-ce.palette.ius" value="com.tibco.bw.palette.clarity.design.feature.feature.group,com.tibco.bw.palette.clarity.model.feature.feature.group,com.tibco.bw.sharedresource.clarity.design.feature.feature.group,com.tibco.bw.sharedresource.clarity.model.feature.feature.group"/>
+		<localVariable name="bwpluginclarity-ce.palette.install.tag" value="TIBCO BW Clarity Palette Features Installation"/>
+		<localVariable name="bwpluginclarity-ce.palette.uninstall.tag" value="TIBCO BW Clarity Palette Features Uninstallation"/>
+
+    </customVariables>
+    
+    <installProfile name="Runtime" uid="runtime-profile" description=""/>
+    <installProfile description="Installs all components of the product" name="Typical" uid="typical" defaultSelected="true"/>
+
+    <installerFeatureNode name="TIBCO ActiveMatrix BusinessWorks(TM) Plug-in for Clarity Design" nodeID="design-node" parentNode="root"/>
+    <installerFeatureNode name="TIBCO ActiveMatrix BusinessWorks(TM) Plug-in for Clarity Runtime" nodeID="runtime-node" parentNode="root"/>
+
+    <installerFeature name="runtime" visible="true" version="6.0.0" parentNode="runtime-node" profileUID="runtime-profile">
+        <assemblyList>
+			<assembly uid="assembly_tibco_com_tibco_bw_palette_clarity_model_feature" overrideTargetDirectory="$L{bwpluginclarity-ce.extension.palettes.runtime.home}" version="6.0.0" />
+			<assembly uid="assembly_tibco_com_tibco_bw_palette_clarity_runtime_feature" overrideTargetDirectory="$L{bwpluginclarity-ce.extension.palettes.runtime.home}" version="6.0.0" />
+			<assembly uid="assembly_tibco_com_tibco_bw_sharedresource_clarity_model_feature" overrideTargetDirectory="$L{bwpluginclarity-ce.extension.palettes.runtime.home}" version="6.0.0" />
+			<assembly uid="assembly_tibco_com_tibco_bw_sharedresource_clarity_runtime_feature"  overrideTargetDirectory="$L{bwpluginclarity-ce.extension.palettes.runtime.home}" version="6.0.0"/>
+			<assembly uid="product_tibco_bwpluginclarity-ce_runtime" overrideTargetDirectory="$L{bwpluginclarity-ce.extension.palettes.home}" version="6.0.0"/>
+			<assembly uid="product_tibco_bwpluginclarity-ce_samples" overrideTargetDirectory="$L{bwpluginclarity-ce.extension.palettes.home}" version="6.0.0"/>
+        </assemblyList>
+
+        <dependency description="TIBCO ActiveMatrix BusinessWorks(TM) Runtime" type="feature" uid="Runtime_BW" version="6.3.0"/>
+
+		<wizardAction sequence="post-selection" class="com.tibco.installer.wizard.action.TIBCOCheckForInstallLoc">
+			<property productAcronym="BW"/>
+			<property minimumVersion="$L{bwpluginclarity-ce.minimum.bw.version}"/>
+			<property vpdUID="BW_runtime"/>
+			<property productAssemblyUID="product_tibco_com_tibco_bw_enterprise_runtime"/>
+			<property productAssemblyMinVersion="$L{bwpluginclarity-ce.minimum.bw.version}"/>
+			<property showProgress="true"/>
+			<property description="Get install location for BW Runtime"/>
+		</wizardAction>
+
+		<postInstallAction taskFile="${tibco.BW.home}/scripts/build.xml" description="TIBCO ActiveMatrix BusinessWorks(TM) Plug-in for Clarity runtime - creating extension palette link" target="create-ext-palette-link" logLevel="debug" sequence="post-assembly-ref">
+			<postInstallActionProperty name="bw.home" value="${tibco.BW.home}"/>
+			<postInstallActionProperty name="bw.home.esc" value="${tibco.BW.home.esc}"/>
+			<postInstallActionProperty name="ext.palette.full.name" value="$L{bwpluginclarity-ce.palette.full.name}"/>
+			<postInstallActionProperty name="ext.palette.short.name" value="$L{bwpluginclarity-ce.palette.short.name}"/>
+			<postInstallActionProperty name="ext.palette.package.name" value="$L{bwpluginclarity-ce.palette.package.name}"/>
+			<postInstallActionProperty name="ext.palette.location" value="$L{bwpluginclarity-ce.extension.palettes.home}"/>
+		</postInstallAction>
+
+		<postInstallAction taskFile="${tibco.BW.home}/scripts/build.xml" description="TIBCO ActiveMatrix BusinessWorks(TM) Plug-in for Clarity runtime - deleting extension palette link" target="delete-ext-palette-link" logLevel="debug" sequence="pre-uninstall-ref">
+			<postInstallActionProperty name="bw.home" value="${tibco.BW.home}"/>
+			<postInstallActionProperty name="bw.home.esc" value="${tibco.BW.home.esc}"/>
+			<postInstallActionProperty name="ext.palette.full.name" value="$L{bwpluginclarity-ce.palette.full.name}"/>
+			<postInstallActionProperty name="ext.palette.short.name" value="$L{bwpluginclarity-ce.palette.short.name}"/>
+			<postInstallActionProperty name="ext.palette.package.name" value="$L{bwpluginclarity-ce.palette.package.name}"/>
+			<postInstallActionProperty name="ext.palette.location" value="$L{bwpluginclarity-ce.extension.palettes.home}"/>
+		</postInstallAction>
+		
+		<postInstallAction taskFile="${tibco.BW.home}/scripts/build.xml" description="TIBCO ActiveMatrix BusinessWorks(TM) Plug-in for Clarity runtime - deleting previous extension palette link" target="delete-ext-palette-link" logLevel="debug" sequence="pre-install-ref">
+			<condition class="com.tibco.installer.wizard.condition.TIBCOFileExistsWizardCondition">
+				<property mustBeMet="true"/>
+				<property filename="${tibco.BW.home.esc}/ext/palettes/com.tibco.bw.palette.clarity.link"/>
+			</condition>
+			<postInstallActionProperty name="bw.home" value="${tibco.BW.home}"/>
+			<postInstallActionProperty name="bw.home.esc" value="${tibco.BW.home.esc}"/>
+			<postInstallActionProperty name="ext.palette.full.name" value="$L{bwpluginclarity-ce.palette.full.name}"/>
+			<postInstallActionProperty name="ext.palette.short.name" value="$L{bwpluginclarity-ce.palette.short.name}"/>
+			<postInstallActionProperty name="ext.palette.package.name" value="$L{bwpluginclarity-ce.palette.package.name}"/>
+			<postInstallActionProperty name="ext.palette.location" value="$L{bwpluginclarity-ce.extension.palettes.home}"/>
+		</postInstallAction>
+		
+    </installerFeature>
+
+    <installerFeature name="design" visible="true" version="6.0.0" parentNode="design-node" profileUID="typical">
+
+		<assemblyList>
+			<assembly overrideTargetDirectory="$L{bwpluginclarity-ce.extension.palettes.design.home}" uid="assembly_tibco_com_tibco_bw_palette_clarity_design_feature" version="6.0.0"/>
+			<assembly overrideTargetDirectory="$L{bwpluginclarity-ce.extension.palettes.design.home}" uid="assembly_tibco_com_tibco_bw_sharedresource_clarity_design_feature" version="6.0.0"/>
+			<assembly additionalTargetDirectory="${tibco.home.esc}/bw/palettes/clarity/6.0/design" uid="assembly_tibco_com_tibco_bw_sharedresource_clarity_model_feature" version="6.0.0"/>
+			<assembly additionalTargetDirectory="${tibco.home.esc}/bw/palettes/clarity/6.0/design" uid="assembly_tibco_com_tibco_bw_palette_clarity_model_feature" version="6.0.0"/>
+		</assemblyList>
+
+        <dependency description="TIBCO ActiveMatrix BusinessWorks(TM) Design" type="feature" uid="Design_BW" version="6.3.0"/>
+		<dependency description="TIBCO ActiveMatrix BusinessWorks(TM) Plug-in for Clarity - Runtime" type="feature" uid="runtime_bwpluginclarity-ce" version="6.0.0"/>
+		<wizardAction sequence="post-selection" class="com.tibco.installer.wizard.action.TIBCOCheckForInstallLoc">
+			<property productAcronym="BW"/>
+			<property minimumVersion="$L{bwpluginclarity-ce.minimum.bw.version}"/>
+			<property vpdUID="BW_design"/>
+			<property productAssemblyUID="product_tibco_com_tibco_bw_enterprise_design"/>
+			<property productAssemblyMinVersion="$L{bwpluginclarity-ce.minimum.bw.version}"/>
+			<property showProgress="true"/>
+			<property description="Get install location for BW Design"/>
+		</wizardAction>
+
+		<wizardAction sequence="post-selection" class="com.tibco.installer.wizard.action.TIBCOCreateP2AssemblyList">
+			<property variableToSet="tibco.p2.assemblies" />
+		</wizardAction>
+
+		<postInstallAction sequence="post-assembly-ref" target="install-ext-palette-design" logLevel="debug" taskFile="${tibco.BW.home}/scripts/build.xml">
+			<postInstallActionProperty name="bw.home" value="${tibco.BW.home}"/>
+			<postInstallActionProperty name="bw.home.esc" value="${tibco.BW.home.esc}"/>
+			<postInstallActionProperty name="ext.palette.short.name" value="$L{bwpluginclarity-ce.palette.short.name}"/>
+			<postInstallActionProperty name="ext.palette.package.name" value="$L{bwpluginclarity-ce.palette.package.name}"/>
+			<postInstallActionProperty name="ext.palette.location" value="$L{bwpluginclarity-ce.extension.palettes.home}"/>
+			<postInstallActionProperty name="ext.palette.install.ius" value="$L{bwpluginclarity-ce.palette.ius}"/>
+			<postInstallActionProperty name="ext.palette.install.tag" value="$L{bwpluginclarity-ce.palette.install.tag}"/>
+		</postInstallAction>
+
+		<postInstallAction logLevel="debug" sequence="post-assembly-ref" target="remove-exclude-as-provisioning-properties" taskFile="${tibco.BW.home}/scripts/build.xml">
+			<postInstallActionProperty name="bw.home" value="${tibco.BW.home}"/>
+			<postInstallActionProperty name="bw.home.esc" value="${tibco.BW.home.esc}"/>
+		</postInstallAction>
+		
+		<postInstallAction logLevel="debug" sequence="post-assembly-ref" target="setup-bwthor-launch" taskFile="${tibco.BW.home}/scripts/build.xml">
+			<postInstallActionProperty name="bw.home" value="${tibco.BW.home}"/>
+			<postInstallActionProperty name="bw.home.esc" value="${tibco.BW.home.esc}"/>
+		</postInstallAction>
+
+		<postInstallAction logLevel="debug" sequence="pre-assembly-uninstall-ref" target="uninstall-ext-palette-design" taskFile="${tibco.BW.home}/scripts/build.xml">
+			<postInstallActionProperty name="bw.home" value="${tibco.BW.home}"/>
+			<postInstallActionProperty name="bw.home.esc" value="${tibco.BW.home.esc}"/>
+			<postInstallActionProperty name="ext.palette.short.name" value="$L{bwpluginclarity-ce.palette.short.name}"/>
+			<postInstallActionProperty name="ext.palette.package.name" value="$L{bwpluginclarity-ce.palette.package.name}"/>
+			<postInstallActionProperty name="ext.palette.location" value="$L{bwpluginclarity-ce.extension.palettes.home}"/>
+			<postInstallActionProperty name="ext.palette.uninstall.ius" value="$L{bwpluginclarity-ce.palette.ius}"/>
+			<postInstallActionProperty name="ext.palette.uninstall.tag" value="$L{bwpluginclarity-ce.palette.uninstall.tag}"/>
+		</postInstallAction>
+
+		<postInstallAction logLevel="debug" sequence="post-uninstall-ref" target="setup-bwthor-launch" taskFile="${tibco.BW.home}/scripts/build.xml">
+			<postInstallActionProperty name="bw.home" value="${tibco.BW.home}"/>
+			<postInstallActionProperty name="bw.home.esc" value="${tibco.BW.home.esc}"/>           
+		</postInstallAction>
+
+    </installerFeature>
+
+</TIBCOInstallerFeatures>

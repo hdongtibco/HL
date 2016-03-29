@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" factory="com.tibco.bw.palette.clarity.model.clarity.ClarityReloadFile" name="bw.clarity.ClarityReloadFile">
+   <implementation class="com.tibco.bw.palette.clarity.runtime.ClarityReloadFileActivity"/>
+   <property name="activityTypeID" type="String" value="bw.clarity.ClarityReloadFile"/>
+   <property name="modelPackageClass" type="String" value="com.tibco.bw.palette.clarity.model.clarity.ClarityPackage"/>
+   <property name="runtimeClass" type="String" value="com.tibco.bw.palette.clarity.runtime.ClarityReloadFileActivity"/>
+</scr:component>

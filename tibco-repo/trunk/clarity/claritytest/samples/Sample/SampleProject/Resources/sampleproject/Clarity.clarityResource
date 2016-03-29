@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:clarityconnection="http://xsd.tns.tibco.com/bw/models/sharedresource/clarityconnection" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_soInQd6xEeWnS_Dg1bRgPA" name="sampleproject.Clarity" type="clarityconnection:ClarityConnection">
+  <jndi:configuration xsi:type="clarityconnection:ClarityConnection" xmi:id="_soInQt6xEeWnS_Dg1bRgPA" serverURL="http://127.0.0.1:3333" userName="clarity" password="#!BAfm8wGVYFl8sJhAsZThG04R57Xula8gLNs2oHbDLTw="/>
+</jndi:namedResource>

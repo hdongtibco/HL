@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id$
+-->
+
+<plugin>
+   <extension
+         point="com.tibco.amf.design.sr.core.sharedResourceExtension">
+      <srExtension
+                 fileExtension="clarityResource"
+            name="ClarityConnection"
+            typeQName="{http://xsd.tns.tibco.com/bw/models/sharedresource/clarityconnection}ClarityConnection">
+      </srExtension>
+
+   </extension>
+   <extension
+         point="com.tibco.amf.design.sr.core.sharedResourceCreator">
+      <sharedResourceCreator
+            sharedResourceType="clarityResource"
+            wizard="com.tibco.bw.sharedresource.clarity.design.wizard.ClarityWizard">
+      </sharedResourceCreator>
+   </extension>
+   
+   <extension
+         point="com.tibco.bw.design.propertyType">
+      <propertyTypeToITBinding
+            implementationTypeID="implementation.bw"
+            supportedPropertyType="{http://xsd.tns.tibco.com/bw/models/sharedresource/clarityconnection}ClarityConnection">
+      </propertyTypeToITBinding>
+      <propertyType
+            QName="{http://xsd.tns.tibco.com/bw/models/sharedresource/clarityconnection}ClarityConnection"
+            cellEditor="com.tibco.bw.sharedresource.common.design.internal.picker.SharedResourceCellEditor:clarityResource"
+            editControl="com.tibco.amf.design.sr.ui.internal.picker.SharedResourcePropertyValueViewer:clarityResource"
+            icon="icons/obj16/clarityconnection_16x16.png"
+            typeLabel="ClarityConnection">
+      </propertyType>
+
+   </extension>
+   
+   <extension
+         point="com.tibco.bw.sharedresource.common.design.BWSharedResource">
+      <resourcetype
+            productID="bw.clarity.product"
+            resourceQName="{http://xsd.tns.tibco.com/bw/models/sharedresource/clarityconnection}ClarityConnection">
+         <requirement
+               requirementName="bw.clarity"
+               requirementNamespace="com.tibco.bw.sharedresource.model">
+         </requirement>
+      </resourcetype>
+   </extension>
+   <extension
+         point="com.tibco.xpd.resources.workingCopyIndexer">
+      <indexer
+            filePattern="clarityResource"
+            indexID="sr.index.clarityResource"
+            indexerClass="com.tibco.amf.design.sr.core.internal.wc.GenericSharedResourceIndexProvider">
+      </indexer>
+   </extension>
+   <extension
+         point="org.eclipse.ui.newWizards">
+      <wizard
+            category="com.tibco.new"
+            class="com.tibco.bw.sharedresource.clarity.design.wizard.ClarityWizard"
+            descriptionImage="icons/obj48/clarityconnection_48x48.png"
+            icon="icons/obj16/clarityconnection_16x16.png"
+            id="com.tibco.bw.sharedresource.clarity.design.wizard"
+            name="%clarity.sharedresource.name"
+            project="true">       
+      </wizard>
+   </extension>
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="com.tibco.bw.sharedresource.clarity.design.wizard.ClaritySharedResourceEditor"
+            contributorClass="com.tibco.bw.sharedresource.common.design.forms.SREditorContributor"
+            default="false"
+            extensions="clarityResource"
+            icon="icons/obj16/clarityconnection_16x16.png"
+            id="com.tibco.bw.sharedresource.clarity.design.editor"
+            name="%clarity.display.activity.name">
+      </editor>
+   </extension>
+   <extension point="org.eclipse.ui.navigator.viewer">
+		<viewerContentBinding viewerId="org.eclipse.ui.navigator.ProjectExplorer">
+			<includes>
+				<contentExtension pattern="com.tibco.bw.sharedresource.cl.navigator.modelData"/>
+			</includes>
+		</viewerContentBinding>
+		<viewerActionBinding viewerId="org.eclipse.ui.navigator.ProjectExplorer">
+			<includes>
+				<actionExtension pattern="com.tibco.bw.sharedresource.as.ui.OpenProvider"/>
+			</includes>
+		</viewerActionBinding>
+   </extension>
+   <extension
+         point="org.eclipse.ui.navigator.navigatorContent">
+      <commonWizard
+            associatedExtensionId="com.tibco.xpd.projectExplorer.compositeContent"
+            menuGroupId="shared-resources"
+            type="new"
+            wizardId="com.tibco.bw.sharedresource.clarity.design.wizard">
+         <enablement>
+            <or>
+               <and>
+                  <instanceof
+                        value="com.tibco.xpd.resources.projectconfig.SpecialFolder">
+                  </instanceof>
+                  <test
+                        property="com.tibco.xpd.resources.specialfolder.isOfKind"
+                        value="com.tibco.amx.zion.resource">
+                  </test>
+               </and>
+               <and>
+                  <instanceof
+                        value="org.eclipse.core.resources.IResource">
+                  </instanceof>
+                  <test
+                        property="com.tibco.xpd.resources.specialfolder.isRootSpecialFolder"
+                        value="com.tibco.amx.zion.resource">
+                  </test>
+               </and>
+            </or>
+         </enablement>
+      </commonWizard>
+   </extension>
+   
+</plugin>

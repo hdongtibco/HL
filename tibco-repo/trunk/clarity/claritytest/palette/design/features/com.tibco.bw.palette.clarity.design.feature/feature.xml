@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="com.tibco.bw.palette.clarity.design.feature"
+      label="%featureName"
+      version="6.0.0.qualifier"
+      provider-name="%providerName">
+
+   <description>
+      %description
+   </description>
+
+   <copyright>
+      %copyright
+   </copyright>
+
+   <license url="%licenseURL">
+      %license
+   </license>
+
+   <requires>
+      <import feature="com.tibco.bw.core.design.feature" version="6.3.0" match="compatible"/>
+      <import feature="com.tibco.bw.palette.clarity.model.feature" version="6.0.0" match="compatible"/>
+      <import feature="com.tibco.bw.sharedresource.clarity.design.feature" version="6.0.0" match="compatible"/>
+      <import feature="com.tibco.bw.sharedresource.clarity.model.feature" version="6.0.0" match="compatible"/>
+   </requires>
+
+
+<!--
+      <import feature="org.eclipse.datatools.connectivity.feature" version="1.11.0" match="compatible"/>
+      <import feature="com.tibco.amxext.annox.model.feature.eclipse" version="1.2.0" match="compatible"/>
+
+      <import feature="com.tibco.tpcl.org.eclipse.bpel.feature" version="1.10.0" match="compatible"/>
+      <import feature="com.tibco.tpcl.javax.xml.bind.feature.eclipse" version="2.10.0" match="compatible"/>
+      <import feature="com.tibco.tpcl.org.jvnet.annox.feature.eclipse" version="0.4.100.001" match="compatible"/>
+      <import feature="com.tibco.amf.sharedresource.model.feature.eclipse" version="3.901.0" match="compatible"/>
+-->
+
+   <plugin
+         id="com.tibco.bw.palette.clarity.design"
+         download-size="0"
+         install-size="0"
+         version="6.0.0.qualifier"
+         unpack="false"/>
+
+</feature>

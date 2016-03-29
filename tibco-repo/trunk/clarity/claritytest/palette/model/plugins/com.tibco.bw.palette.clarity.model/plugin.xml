@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ Copyright2011 - 2013 TIBCO Software Inc.
+ All rights reserved.
+ This software is confidential and proprietary information of TIBCO Software Inc.
+ Overridable true
+ </copyright>
+ $Id$
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://ns.tibco.com/bw/palette/clarity"
+            class="com.tibco.bw.palette.clarity.model.clarity.ClarityPackage"/>
+   </extension>
+      <extension
+         point="org.eclipse.emf.ecore.extension_parser">
+      <parser
+            class="com.tibco.bw.palette.clarity.model.clarity.util.ClarityAdapterFactory"
+            type="bwclarity">
+      </parser>
+   </extension>
+   <extension
+         point="com.tibco.bw.model.ActivityIcon">
+     <activityIcon
+            activityTypeID="bw.clarity.ClarityAddFiles"
+            diagramIcon="icons/obj48/clarity_addfiles_48x48.png"
+            largeIcon="icons/obj32/clarity_addfiles_32x32.png"
+            smallIcon="icons/obj16/clarity_addfiles_16x16.png"> 
+      </activityIcon>
+      <activityIcon
+            activityTypeID="bw.clarity.ClarityGetBatchResult"
+            diagramIcon="icons/obj48/clarity_getbatchresult_48x48.png"
+            largeIcon="icons/obj32/clarity_getbatchresult_32x32.png"
+            smallIcon="icons/obj16/clarity_getbatchresult_16x16.png"> 
+      </activityIcon>     
+
+         <activityIcon
+            activityTypeID="bw.clarity.ClarityGetKey"
+            diagramIcon="icons/obj48/clarity_getkey_48x48.png"
+            largeIcon="icons/obj32/clarity_getkey_32x32.png"
+            smallIcon="icons/obj16/clarity_getkey_16x16.png"> 
+      </activityIcon>
+         <activityIcon
+            activityTypeID="bw.clarity.ClarityQueryBatch"
+            diagramIcon="icons/obj48/clarity_querybatch_48x48.png"
+            largeIcon="icons/obj32/clarity_querybatch_32x32.png"
+            smallIcon="icons/obj16/clarity_querybatch_16x16.png"> 
+      </activityIcon>  
+      <activityIcon
+            activityTypeID="bw.clarity.ClarityReloadFile"
+            diagramIcon="icons/obj48/clarity_reloadfile_48x48.png"
+            largeIcon="icons/obj32/clarity_reloadfile_32x32.png"
+            smallIcon="icons/obj16/clarity_reloadfile_16x16.png"> 
+      </activityIcon> 
+      <activityIcon
+            activityTypeID="bw.clarity.ClarityRemoveFiles"
+            diagramIcon="icons/obj48/clarity_removefiles_48x48.png"
+            largeIcon="icons/obj32/clarity_removefiles_32x32.png"
+            smallIcon="icons/obj16/clarity_removefiles_16x16.png"> 
+      </activityIcon>             
+     <activityIcon
+            activityTypeID="bw.clarity.StartBatch"
+            diagramIcon="icons/obj48/clarity_startbatch_48x48.png"
+            largeIcon="icons/obj32/clarity_startbatch_32x32.png"
+            smallIcon="icons/obj16/clarity_startbatch_16x16.png"> 
+      </activityIcon>          
+    </extension>
+</plugin>

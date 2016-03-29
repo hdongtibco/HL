@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ Copyright2011 - 2013 TIBCO Software Inc.
+ All rights reserved.
+ This software is confidential and proprietary information of TIBCO Software Inc.
+ Overridable true
+ </copyright>
+ $Id$
+-->
+
+<plugin>
+
+   <extension
+         point="com.tibco.bw.design.Palette">
+      <paletteDrawer
+            expanded="false"
+            paletteID="bw.clarity"
+            name="%clarity.palette.name"
+            priority="500"
+            smallIcon="icons/obj16/clarity_16x16.png"
+            productID="bw.clarity.product"
+            tooltip="%clarity.palette.tooltip">
+      </paletteDrawer>
+   </extension>
+   
+   <extension
+         point="com.tibco.bw.design.ActivityType">
+      <activityType
+            activityTypeID="bw.clarity.StartBatch"
+            name="%clarity.activity.StartBatch.name"
+            priority="100"
+            tooltip="%clarity.activity.StartBatch.tooltip"
+            visible="true">
+         <palette
+               paletteID="bw.clarity">
+         </palette>
+      </activityType>
+
+        <activityType
+            activityTypeID="bw.clarity.ClarityAddFiles"
+            name="%clarity.activity.ClarityAddFiles.name"
+            priority="100"
+            tooltip="%clarity.activity.ClarityAddFiles.tooltip"
+            visible="true">
+         <palette
+               paletteID="bw.clarity">
+         </palette>
+      </activityType>
+ 
+         <activityType
+            activityTypeID="bw.clarity.ClarityGetBatchResult"
+            name="%clarity.activity.ClarityGetBatchResult.name"
+            priority="100"
+            tooltip="%clarity.activity.ClarityGetBatchResult.tooltip"
+            visible="true">
+         <palette
+               paletteID="bw.clarity">
+         </palette>
+      </activityType>
+     
+        <activityType
+            activityTypeID="bw.clarity.ClarityGetKey"
+            name="%clarity.activity.ClarityGetKey.name"
+            priority="100"
+            tooltip="%clarity.activity.ClarityGetKey.tooltip"
+            visible="true">
+         <palette
+               paletteID="bw.clarity">
+         </palette>
+      </activityType>
+      
+      <activityType
+            activityTypeID="bw.clarity.ClarityQueryBatch"
+            name="%clarity.activity.ClarityQueryBatch.name"
+            priority="100"
+            tooltip="%clarity.activity.ClarityQueryBatch.tooltip"
+            visible="true">
+         <palette
+               paletteID="bw.clarity">
+         </palette>
+      </activityType>
+      
+      <activityType
+            activityTypeID="bw.clarity.ClarityReloadFile"
+            name="%clarity.activity.ClarityReloadFile.name"
+            priority="100"
+            tooltip="%clarity.activity.ClarityReloadFile.tooltip"
+            visible="true">
+         <palette
+               paletteID="bw.clarity">
+         </palette>
+      </activityType>      
+      
+      <activityType
+            activityTypeID="bw.clarity.ClarityRemoveFiles"
+            name="%clarity.activity.ClarityRemoveFiles.name"
+            priority="100"
+            tooltip="%clarity.activity.ClarityRemoveFiles.tooltip"
+            visible="true">
+         <palette
+               paletteID="bw.clarity">
+         </palette>
+      </activityType>        
+      
+   </extension>
+   
+     <extension
+         point="com.tibco.bw.design.ActivitySignature">
+         
+       <signature
+            activityTypeID="bw.clarity.ClarityAddFiles"
+            signatureClass="com.tibco.bw.palette.clarity.design.ClarityAddFiles.ClarityAddFilesSignature">
+      </signature>
+
+       <signature
+            activityTypeID="bw.clarity.ClarityGetBatchResult"
+            signatureClass="com.tibco.bw.palette.clarity.design.ClarityGetBatchResult.ClarityGetBatchResultSignature">
+      </signature>               
+
+       <signature
+            activityTypeID="bw.clarity.ClarityGetKey"
+            signatureClass="com.tibco.bw.palette.clarity.design.ClarityGetKey.ClarityGetKeySignature">
+      </signature>
+      
+       <signature
+            activityTypeID="bw.clarity.ClarityQueryBatch"
+            signatureClass="com.tibco.bw.palette.clarity.design.ClarityQueryBatch.ClarityQueryBatchSignature">
+      </signature>    
+
+       <signature
+            activityTypeID="bw.clarity.ClarityReloadFile"
+            signatureClass="com.tibco.bw.palette.clarity.design.ClarityReloadFile.ClarityReloadFileSignature">
+      </signature>  
+
+       <signature
+            activityTypeID="bw.clarity.ClarityRemoveFiles"
+            signatureClass="com.tibco.bw.palette.clarity.design.ClarityRemoveFiles.ClarityRemoveFilesSignature">
+      </signature>  
+        
+       <signature
+            activityTypeID="bw.clarity.StartBatch"
+            signatureClass="com.tibco.bw.palette.clarity.design.startbatch.StartBatchSignature">
+      </signature>
+      
+   </extension>
+   
+   <extension
+         point="com.tibco.bw.design.ActivityTypeConfigEMF">
+
+      <config
+            activityTypeID="bw.clarity.ClarityAddFiles"
+            eClassName="ClarityAddFiles"
+            ePackageNSURI="http://ns.tibco.com/bw/palette/clarity"
+            instanceName="%clarity.activity.default.ClarityAddFiles.name"
+            modelHelperClass="com.tibco.bw.palette.clarity.design.ClarityAddFiles.ClarityAddFilesModelHelper">
+      </config>
+      
+      <config
+            activityTypeID="bw.clarity.ClarityGetBatchResult"
+            eClassName="ClarityGetBatchResult"
+            ePackageNSURI="http://ns.tibco.com/bw/palette/clarity"
+            instanceName="%clarity.activity.default.ClarityGetBatchResult.name"
+            modelHelperClass="com.tibco.bw.palette.clarity.design.ClarityGetBatchResult.ClarityGetBatchResultModelHelper">
+      </config>
+         
+      <config
+            activityTypeID="bw.clarity.ClarityGetKey"
+            eClassName="ClarityGetKey"
+            ePackageNSURI="http://ns.tibco.com/bw/palette/clarity"
+            instanceName="%clarity.activity.default.ClarityGetKey.name"
+            modelHelperClass="com.tibco.bw.palette.clarity.design.ClarityGetKey.ClarityGetKeyModelHelper">
+      </config>
+      
+       <config
+            activityTypeID="bw.clarity.ClarityQueryBatch"
+            eClassName="ClarityQueryBatch"
+            ePackageNSURI="http://ns.tibco.com/bw/palette/clarity"
+            instanceName="%clarity.activity.default.ClarityQueryBatch.name"
+            modelHelperClass="com.tibco.bw.palette.clarity.design.ClarityQueryBatch.ClarityQueryBatchModelHelper">
+      </config>
+
+       <config
+            activityTypeID="bw.clarity.ClarityReloadFile"
+            eClassName="ClarityReloadFile"
+            ePackageNSURI="http://ns.tibco.com/bw/palette/clarity"
+            instanceName="%clarity.activity.default.ClarityReloadFile.name"
+            modelHelperClass="com.tibco.bw.palette.clarity.design.ClarityReloadFile.ClarityReloadFileModelHelper">
+      </config> 
+
+       <config
+            activityTypeID="bw.clarity.ClarityRemoveFiles"
+            eClassName="ClarityRemoveFiles"
+            ePackageNSURI="http://ns.tibco.com/bw/palette/clarity"
+            instanceName="%clarity.activity.default.ClarityRemoveFiles.name"
+            modelHelperClass="com.tibco.bw.palette.clarity.design.ClarityRemoveFiles.ClarityRemoveFilesModelHelper">
+      </config> 
+      
+      <config
+            activityTypeID="bw.clarity.StartBatch"
+            eClassName="StartBatch"
+            ePackageNSURI="http://ns.tibco.com/bw/palette/clarity"
+            instanceName="%clarity.activity.default.StartBatch.name"
+            modelHelperClass="com.tibco.bw.palette.clarity.design.startbatch.StartBatchModelHelper">
+      </config>
+      
+   </extension>
+
+   <extension
+         point="org.eclipse.ui.views.properties.tabbed.propertySections">
+      <propertySections
+            contributorId="com.tibco.bw.core.design.process.editor">
+             
+          <propertySection
+               afterSection="com.tibco.bw.design.activity.general"
+               class="com.tibco.bw.palette.clarity.design.ClarityAddFiles.ClarityAddFilesGeneralSection"
+               filter="com.tibco.bw.palette.clarity.design.ClarityAddFiles.ClarityAddFilesGeneralSection"
+               id="bw.clarity.ClarityAddFiles.general"
+               tab="tibco.bw.activity.property.tab.general">
+         </propertySection>
+
+         <propertySection
+               afterSection="com.tibco.bw.design.activity.general"
+               class="com.tibco.bw.palette.clarity.design.ClarityGetBatchResult.ClarityGetBatchResultGeneralSection"
+               filter="com.tibco.bw.palette.clarity.design.ClarityGetBatchResult.ClarityGetBatchResultGeneralSection"
+               id="bw.clarity.ClarityGetBatchResult.general"
+               tab="tibco.bw.activity.property.tab.general">
+         </propertySection>
+            
+         <propertySection
+               afterSection="com.tibco.bw.design.activity.general"
+               class="com.tibco.bw.palette.clarity.design.ClarityGetKey.ClarityGetKeyGeneralSection"
+               filter="com.tibco.bw.palette.clarity.design.ClarityGetKey.ClarityGetKeyGeneralSection"
+               id="bw.clarity.ClarityGetKey.general"
+               tab="tibco.bw.activity.property.tab.general">
+         </propertySection>
+         
+          <propertySection
+               afterSection="com.tibco.bw.design.activity.general"
+               class="com.tibco.bw.palette.clarity.design.ClarityQueryBatch.ClarityQueryBatchGeneralSection"
+               filter="com.tibco.bw.palette.clarity.design.ClarityQueryBatch.ClarityQueryBatchGeneralSection"
+               id="bw.clarity.ClarityQueryBatch.general"
+               tab="tibco.bw.activity.property.tab.general">
+         </propertySection>     
+
+          <propertySection
+               afterSection="com.tibco.bw.design.activity.general"
+               class="com.tibco.bw.palette.clarity.design.ClarityReloadFile.ClarityReloadFileGeneralSection"
+               filter="com.tibco.bw.palette.clarity.design.ClarityReloadFile.ClarityReloadFileGeneralSection"
+               id="bw.clarity.ClarityReloadFile.general"
+               tab="tibco.bw.activity.property.tab.general">
+         </propertySection>     
+
+          <propertySection
+               afterSection="com.tibco.bw.design.activity.general"
+               class="com.tibco.bw.palette.clarity.design.ClarityRemoveFiles.ClarityRemoveFilesGeneralSection"
+               filter="com.tibco.bw.palette.clarity.design.ClarityRemoveFiles.ClarityRemoveFilesGeneralSection"
+               id="bw.clarity.ClarityRemoveFiles.general"
+               tab="tibco.bw.activity.property.tab.general">
+         </propertySection>   
+            
+         <propertySection
+               afterSection="com.tibco.bw.design.activity.general"
+               class="com.tibco.bw.palette.clarity.design.startbatch.StartBatchGeneralSection"
+               filter="com.tibco.bw.palette.clarity.design.startbatch.StartBatchGeneralSection"
+               id="bw.clarity.StartBatch.general"
+               tab="tibco.bw.activity.property.tab.general">
+         </propertySection>
+         
+      </propertySections>
+   </extension>
+     
+</plugin>

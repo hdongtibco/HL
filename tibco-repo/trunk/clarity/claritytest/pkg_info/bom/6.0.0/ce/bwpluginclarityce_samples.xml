@@ -1,0 +1,7 @@
+<?xml  version="1.0"?>
+<components>
+	<component name="bwpluginclarityce_samples" type="common">
+		<include file="aliases_bwpluginclarityce.xml" />
+		<dir src="${bldsrcdir}/samples" dest="" plat="${ALL}"/>
+	</component>
+</components>
