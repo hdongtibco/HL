@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="com.tibco.bw.tools.migrator.activespace.feature"
+      label="%featureName"
+      version="6.2.0.qualifier"
+      provider-name="%providerName">
+
+   <description>
+      %description
+   </description>
+
+   <copyright>
+      %copyright
+   </copyright>
+
+   <license url="%licenseURL">
+      %license
+   </license>
+
+   <requires>
+      <import feature="com.tibco.bw.core.design.feature" version="6.3.0" match="compatible"/>
+      <import feature="com.tibco.bw.it.model.feature" version="6.2.0" match="compatible"/>
+      <import feature="com.tibco.bw.palette.design.feature" version="6.3.0" match="compatible"/>
+      <import feature="com.tibco.bw.palette.model.feature" version="6.3.0" match="compatible"/>
+      <import feature="com.tibco.bw.5x.libraries.feature" version="1.4.0" match="compatible"/>
+      <import feature="com.tibco.bx.common.model.feature.eclipse" version="2.0.0" match="compatible"/>
+      <import feature="com.tibco.neo.model.core.feature.eclipse" version="1.902.0" match="compatible"/>
+      <import feature="com.tibco.bw.sharedresource.model.feature" version="6.3.0" match="compatible"/>
+      <import feature="com.tibco.tibcoxml.xml.eclipse" version="5.60.100" match="compatible"/>
+      <import feature="com.tibco.tibcoxml.webservices.eclipse" version="5.60.100" match="compatible"/>
+      <import feature="com.tibco.tibcoxml.util.eclipse" version="5.60.100" match="compatible"/>
+      <import feature="com.tibco.tibcoxml.xml.extras.eclipse" version="5.60.100" match="compatible"/>
+      <import feature="com.tibco.amf.sharedresource.jms.model.feature.eclipse" version="1.900.0" match="compatible"/>
+      <import feature="com.tibco.bw.tools.feature" version="6.3.0" match="compatible"/>
+      <import feature="com.tibco.as.common.feature" version="2.1.600" match="compatible"/>
+      <import feature="com.tibco.bw.sharedresource.activespace.model.feature" version="6.2.0" match="compatible"/>
+      <import feature="com.tibco.bw.palette.activespace.model.feature" version="6.2.0" match="compatible"/>
+   </requires>
+
+   <plugin
+         id="com.tibco.bw.tools.migrator.v6.palette.activespace"
+         download-size="0"
+         install-size="0"
+         version="6.2.0.qualifier"
+         unpack="false"/>
+
+   <plugin
+         id="com.tibco.bw.5x.libraries.palette.activespace.api"
+         download-size="0"
+         install-size="0"
+         version="1.2.0.qualifier"
+         fragment="true"
+         unpack="false"/>
+
+</feature>

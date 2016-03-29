@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" factory="com.tibco.bw.palette.activespace.model.as.Lock" name="bw.asbw.Lock">
+   <implementation class="com.tibco.bw.palette.activespace.runtime.LockActivity"/>
+   <property name="activityTypeID" type="String" value="bw.asbw.Lock"/>
+   <property name="modelPackageClass" type="String" value="com.tibco.bw.palette.activespace.model.as.AsPackage"/>
+   <property name="runtimeClass" type="String" value="com.tibco.bw.palette.activespace.runtime.LockActivity"/>
+</scr:component>

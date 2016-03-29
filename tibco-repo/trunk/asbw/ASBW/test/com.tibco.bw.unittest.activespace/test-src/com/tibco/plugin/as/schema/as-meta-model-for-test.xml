@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<as:AS xmlns="http://www.tibco.com/2012/QL/AS" xmlns:as="http://www.tibco.com/2012/QL/AS" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="AS.model.xsd">
+	<as:MemberDefMeta>
+		<as:ListOfMeta as:_id="MemberDefClasses">
+			<as:Meta as:_element="MemberDef" as:_id="MemberDef" as:displayName="Member Definition"
+					as:javaClass="com.tibco.as.space.MemberDef"
+					as:javaDefaultConstructionMethod="create">
+
+
+				<as:PropertyListDefinition>
+					<as:Property as:_id="MemberName">
+						<as:displayName as:value="Member Name"/>
+						<as:dataType as:value="string"/>
+						<as:isRequired as:value="true"/>
+					</as:Property>
+
+					<as:Property as:_id="Discovery" as:previous_ids="discoveryUrl">
+						<as:displayName as:value="Discovery URL"/>
+						<as:dataType as:value="string"/>
+						<as:isRequired as:value="true"/>
+					</as:Property>
+					<!-- Fly comment it.
+					<as:Property as:_id="Listen" as:previous_ids="listenUrl">
+						<as:displayName as:value="Listen URL"/>
+						<as:dataType as:value="string"/>
+						<as:isRequired as:value="true"/>
+					</as:Property>
+					
+					<as:Property as:_id="WorkerThreadCount">
+                        <as:displayName as:value="Allowed Invocation Thread Count"/>
+                        <as:dataType as:value="integer"/>
+                        <as:isRequired as:value="false"/>
+                    </as:Property>
+					
+					<as:Property as:_id="DataStore">
+                        <as:displayName as:value="Data Store Location"/>
+                        <as:dataType as:value="string"/>
+                        <as:isRequired as:value="false"/>
+                    </as:Property>
+					-->
+				</as:PropertyListDefinition>
+				
+			</as:Meta>
+		</as:ListOfMeta>
+	
+	</as:MemberDefMeta>
+	
+	<as:SpaceDefMeta>
+		<as:ListOfMeta as_id="SpaceDefClass">
+			<as:Meta as:_element="FieldDef" as:_id="FieldDef" as:displayName="Field Definition"
+					 as:javaClass="com.tibco.as.space.FieldDef"
+					 as:javaDefaultConstructionMethod="create"
+					 as:javaDefaultConstructionParams="Name,Type">
+				<as:PropertyListDefinition>
+				
+					<as:Property as:_id="Name" as:previous_ids="name">
+						<as:displayName as:value="Field Name"/>
+						<as:dataType as:value="string"/>
+						<as:isRequired as:value="true"/>
+						<as:isReadOnly as:value="true"/>
+						<as:allowedValues as:value="^[a-zA-Z_]\w*"/>
+					</as:Property>
+				
+					<as:Property as:_id="Type" as:previous_ids="fieldtype">
+						<as:displayName as:value="Field Type"/>
+						<as:dataType as:value="enumeration"/>
+						<as:enumerationType as:value="string"/>
+						<as:enumerationJavaClass as:value="com.tibco.as.space.FieldDef.FieldType"/>
+						<as:defaultValue as:value="STRING"/>
+						<as:isRequired as:value="true"/>
+						<as:isReadOnly as:value="true"/>
+					</as:Property>
+
+					<as:Property as:_id="Nullable" as:previous_ids="isnullable">
+						<as:displayName as:value="Allow Field to be Null"/>
+						<as:dataType as:value="boolean"/>
+						<as:defaultValue as:value="false"/>
+						<!-- overriding default getter method from getNullable to isNullable -->
+						<as:getJavaMethodOverride as:value="isNullable"/>
+					</as:Property>
+
+				</as:PropertyListDefinition>
+				
+			</as:Meta>
+		
+		</as:ListOfMeta>
+	</as:SpaceDefMeta>
+</as:AS>

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<project default="main">
+	<target name="subsitute">
+		<replaceregexp file="../lib/bwextension.ini"  match="_TIBCO_RELEASE_VERSION_"  replace="${_TIBCO_RELEASE_VERSION_}"/>
+		<replaceregexp file="../lib/bwextension.ini"  match="_TIBCO_BUILD_TAG_"  replace="${_TIBCO_BUILD_TAG_}"/>
+		<replaceregexp file="../lib/bwextension.ini"  match="_TIBCO_BUILD_DATE_"  replace="${_TIBCO_BUILD_DATE_}"/>
+	</target>
+	
+	<target name="main" depends="subsitute">
+		<echo> In main target...</echo>
+	</target>
+</project>

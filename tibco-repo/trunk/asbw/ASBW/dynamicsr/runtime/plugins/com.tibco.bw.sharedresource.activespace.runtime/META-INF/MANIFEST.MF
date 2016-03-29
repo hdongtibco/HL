@@ -1,0 +1,27 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: com.tibco.bw.sharedresource.activespace.runtime;singleton:=true
+Bundle-Version: 6.2.1.qualifier
+Bundle-Vendor: TIBCO Software Inc.
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Import-Package: com.tibco.as.space;version="[2.1.600,3.0.0)",
+ com.tibco.bw.runtime;version="[6.3.0,7.0.0)",
+ com.tibco.bw.sharedresource.activespace.model.assr;version="[6.2.0,7.0.0)",
+ com.tibco.bw.sharedresource.activespace.model.helper;version="[6.2.0,7.0.0)",
+ com.tibco.bw.sharedresource.activespace.model.schema;version="[6.2.0,7.0.0)",
+ com.tibco.bw.sharedresource.runtime;version="[6.2.0,7.0.0)",
+ com.tibco.bw.sharedresource.runtime.builder;version="[6.2.0,7.0.0)",
+ com.tibco.bw.sharedresource.runtime.configuration;version="[6.2.0,7.0.0)",
+ com.tibco.bw.sharedresource.runtime.exception;version="[6.2.0,7.0.0)",
+ com.tibco.neo.localized;version="[2.5.100,3.0.0)",
+ org.genxdm.xs;version="[1.2.0,2.0.0)",
+ org.genxdm.xs.components;version="[1.2.0,2.0.0)",
+ org.osgi.framework;version="[1.8.0,2.0.0)",
+ org.slf4j;version="[1.8.0,2.0.0)"
+Bundle-ActivationPolicy: lazy
+Service-Component: OSGI-INF/metaspace.xml, OSGI-INF/space.xml, OSGI-INF/spaceconnection.xml
+Export-Package: com.tibco.bw.sharedresource.activespace.runtime.metaspace;version="6.2.1",
+ com.tibco.bw.sharedresource.activespace.runtime.space;version="6.2.1",
+ com.tibco.bw.sharedresource.activespace.runtime.spaceconnection;version="6.2.1"
+Require-Bundle: com.tibco.as.common;bundle-version="[2.1.600,3.0.0)"

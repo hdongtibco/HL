@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:assr="http://xsd.tns.tibco.com/bw/models/sharedresource/activespace" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_JB4FkY6FEeWBg7QmWw_Hag" name="spaceresulthandler.Metaspace" type="assr:Metaspace">
+  <jndi:configuration xsi:type="assr:Metaspace" xmi:id="_JB4Fko6FEeWBg7QmWw_Hag" metaspaceName="msSpaceResultHandler">
+    <dynamicFieldAttrs xmi:id="_JEEd8I6FEeWBg7QmWw_Hag" fieldId="MemberName" fieldType="string" fieldValue="ms_handler"/>
+    <dynamicFieldAttrs xmi:id="_JEEd8Y6FEeWBg7QmWw_Hag" fieldId="Discovery" fieldType="string" fieldValue=""/>
+    <dynamicFieldAttrs xmi:id="_JEEd8o6FEeWBg7QmWw_Hag" fieldId="Listen" fieldType="string" fieldValue=""/>
+    <dynamicFieldAttrs xmi:id="_JEEd846FEeWBg7QmWw_Hag" fieldId="RemoteListen" fieldType="string"/>
+    <dynamicFieldAttrs xmi:id="_JEEd9I6FEeWBg7QmWw_Hag" fieldId="WorkerThreadCount" fieldType="integer" fieldValue="32"/>
+    <dynamicFieldAttrs xmi:id="_JEEd9Y6FEeWBg7QmWw_Hag" fieldId="ConnectTimeout" fieldType="long" fieldValue="-1"/>
+    <dynamicFieldAttrs xmi:id="_JEEd9o6FEeWBg7QmWw_Hag" fieldId="MemberTimeout" fieldType="long" fieldValue="30000"/>
+    <dynamicFieldAttrs xmi:id="_JEEd946FEeWBg7QmWw_Hag" fieldId="ClientTimeout" fieldType="long" fieldValue="600000"/>
+    <dynamicFieldAttrs xmi:id="_JEEd-I6FEeWBg7QmWw_Hag" fieldId="ClusterSuspendThreshold" fieldType="integer" fieldValue="-1"/>
+    <dynamicFieldAttrs xmi:id="_JEEd-Y6FEeWBg7QmWw_Hag" fieldId="DataStore" fieldType="string"/>
+    <dynamicFieldAttrs xmi:id="_JEEd-o6FEeWBg7QmWw_Hag" fieldId="SecurityPolicyFile" fieldType="string"/>
+    <dynamicFieldAttrs xmi:id="_JEEd-46FEeWBg7QmWw_Hag" fieldId="SecurityTokenFile" fieldType="string"/>
+    <spaces xmi:id="_XZkj4I6FEeWBg7QmWw_Hag" spaceName="Space">
+      <fieldDefinitions xmi:id="_X65IQI6FEeWBg7QmWw_Hag">
+        <dynamicFieldAttrs xmi:id="_X65IQY6FEeWBg7QmWw_Hag" fieldId="Name" fieldType="string" fieldValue="id"/>
+        <dynamicFieldAttrs xmi:id="_X65IQo6FEeWBg7QmWw_Hag" fieldId="Type" fieldType="enumeration" fieldValue="INTEGER"/>
+        <dynamicFieldAttrs xmi:id="_X65IQ46FEeWBg7QmWw_Hag" fieldId="Nullable" fieldType="boolean" fieldValue="false"/>
+        <dynamicFieldAttrs xmi:id="_X65IRI6FEeWBg7QmWw_Hag" fieldId="Encrypted" fieldType="boolean" fieldValue="false"/>
+      </fieldDefinitions>
+      <fieldDefinitions xmi:id="_Yyrr4I6FEeWBg7QmWw_Hag">
+        <dynamicFieldAttrs xmi:id="_Yyrr4Y6FEeWBg7QmWw_Hag" fieldId="Name" fieldType="string" fieldValue="name"/>
+        <dynamicFieldAttrs xmi:id="_Yyrr4o6FEeWBg7QmWw_Hag" fieldId="Type" fieldType="enumeration" fieldValue="STRING"/>
+        <dynamicFieldAttrs xmi:id="_Yyrr446FEeWBg7QmWw_Hag" fieldId="Nullable" fieldType="boolean" fieldValue="false"/>
+        <dynamicFieldAttrs xmi:id="_Yyrr5I6FEeWBg7QmWw_Hag" fieldId="Encrypted" fieldType="boolean" fieldValue="false"/>
+      </fieldDefinitions>
+      <keyDefinition xmi:id="_XfatMI6FEeWBg7QmWw_Hag">
+        <dynamicFieldAttrs xmi:id="_XfatMY6FEeWBg7QmWw_Hag" fieldId="IndexType" fieldType="enumeration" fieldValue="HASH"/>
+        <dynamicFieldAttrs xmi:id="_XfatMo6FEeWBg7QmWw_Hag" fieldId="FieldNames" fieldType="string[]" fieldValue="id"/>
+      </keyDefinition>
+      <dynamicFieldAttrs xmi:id="_XftBEI6FEeWBg7QmWw_Hag" fieldId="DistributionPolicy" fieldType="enumeration" fieldValue="DISTRIBUTED"/>
+      <dynamicFieldAttrs xmi:id="_Xf5OUI6FEeWBg7QmWw_Hag" fieldId="Capacity" fieldType="long" fieldValue=""/>
+      <dynamicFieldAttrs xmi:id="_Xf_U8I6FEeWBg7QmWw_Hag" fieldId="EvictionPolicy" fieldType="enumeration" fieldValue="NONE"/>
+      <dynamicFieldAttrs xmi:id="_XgFbkI6FEeWBg7QmWw_Hag" fieldId="PersistenceType" fieldType="enumeration" fieldValue="NONE"/>
+      <dynamicFieldAttrs xmi:id="_XgRo0I6FEeWBg7QmWw_Hag" fieldId="PersistencePolicy" fieldType="enumeration" fieldValue="SYNC"/>
+      <dynamicFieldAttrs xmi:id="_XgXvcI6FEeWBg7QmWw_Hag" fieldId="MinSeederCount" fieldType="integer" fieldValue="1"/>
+      <dynamicFieldAttrs xmi:id="_Xgd2EI6FEeWBg7QmWw_Hag" fieldId="ReplicationCount" fieldType="integer" fieldValue="0"/>
+      <dynamicFieldAttrs xmi:id="_XgqDUI6FEeWBg7QmWw_Hag" fieldId="ReplicationPolicy" fieldType="enumeration" fieldValue="SYNC"/>
+      <dynamicFieldAttrs xmi:id="_XgwJ8I6FEeWBg7QmWw_Hag" fieldId="HostAwareReplication" fieldType="boolean" fieldValue="true"/>
+      <dynamicFieldAttrs xmi:id="_Xg8XMI6FEeWBg7QmWw_Hag" fieldId="TTL" fieldType="long" fieldValue=""/>
+      <dynamicFieldAttrs xmi:id="_XhCd0I6FEeWBg7QmWw_Hag" fieldId="LockTTL" fieldType="long" fieldValue=""/>
+      <dynamicFieldAttrs xmi:id="_XhIkcI6FEeWBg7QmWw_Hag" fieldId="LockWait" fieldType="long" fieldValue=""/>
+      <dynamicFieldAttrs xmi:id="_XhUxsI6FEeWBg7QmWw_Hag" fieldId="SpaceWait" fieldType="long" fieldValue="60000"/>
+      <dynamicFieldAttrs xmi:id="_Xha4UI6FEeWBg7QmWw_Hag" fieldId="WriteTimeout" fieldType="long" fieldValue="60000"/>
+      <dynamicFieldAttrs xmi:id="_Xhg-8I6FEeWBg7QmWw_Hag" fieldId="ReadTimeout" fieldType="long" fieldValue="60000"/>
+      <dynamicFieldAttrs xmi:id="_XhtMMI6FEeWBg7QmWw_Hag" fieldId="QueryLimit" fieldType="long" fieldValue="10000"/>
+      <dynamicFieldAttrs xmi:id="_XhzS0I6FEeWBg7QmWw_Hag" fieldId="QueryTimeout" fieldType="long" fieldValue="-1"/>
+      <spaceConnection xmi:id="_bY0AoI6FEeWBg7QmWw_Hag" spaceConnectionName="Space Connection"/>
+      <affinityDefinition xmi:id="_Xfm6cI6FEeWBg7QmWw_Hag">
+        <dynamicFieldAttrs xmi:id="_Xfm6cY6FEeWBg7QmWw_Hag" fieldId="FiledNames" fieldType="string[]"/>
+      </affinityDefinition>
+    </spaces>
+  </jndi:configuration>
+</jndi:namedResource>

@@ -1,0 +1,5 @@
+2--Failed tuple index:6   Error message: com.tibco.as.space.ASException: capacity_exceeded 
+2--Failed tuple index:7   Error message: com.tibco.as.space.ASException: capacity_exceeded 
+2--Failed tuple index:8   Error message: com.tibco.as.space.ASException: capacity_exceeded 
+2--Failed tuple index:9   Error message: com.tibco.as.space.ASException: capacity_exceeded 
+2--Failed tuple index:10   Error message: com.tibco.as.space.ASException: capacity_exceeded 

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id$
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            class="com.tibco.bw.palette.activespace.model.as.AsPackage"
+            genModel="model/activespace.genmodel"
+            uri="http://ns.tibco.com/bw/palette/as"/>
+   </extension>
+   <extension
+         point="org.eclipse.emf.ecore.extension_parser">
+      <parser
+            class="com.tibco.bw.palette.activespace.model.as.util.AsAdapterFactory"
+            type="as">
+      </parser>
+   </extension>
+   <extension
+         point="com.tibco.bw.model.ActivityIcon">
+      <activityIcon
+            activityTypeID="bw.asbw.BeginTransaction"
+            diagramIcon="icons/obj48/begintransaction_48x48.png"
+            largeIcon="icons/obj32/begintransaction_32x32.png"
+            smallIcon="icons/obj16/begintransaction_16x16.png">
+      </activityIcon>
+      <activityIcon
+            activityTypeID="bw.asbw.RollbackTransaction"
+            diagramIcon="icons/obj48/rollbacktransaction_48x48.png"
+            largeIcon="icons/obj32/rollbacktransaction_32x32.png"
+            smallIcon="icons/obj16/rollbacktransaction_16x16.png">
+      </activityIcon>
+      <activityIcon
+            activityTypeID="bw.asbw.CommitTransaction"
+            diagramIcon="icons/obj48/committransaction_48x48.png"
+            largeIcon="icons/obj32/committransaction_32x32.png"
+            smallIcon="icons/obj16/committransaction_16x16.png">
+      </activityIcon>
+      <activityIcon
+            activityTypeID="bw.asbw.Put"
+            diagramIcon="icons/obj48/put_48x48.png"
+            largeIcon="icons/obj32/put_32x32.png"
+            smallIcon="icons/obj16/put_16x16.png">
+      </activityIcon>
+      <activityIcon
+            activityTypeID="bw.asbw.Take"
+            diagramIcon="icons/obj48/take_48x48.png"
+            largeIcon="icons/obj32/take_32x32.png"
+            smallIcon="icons/obj16/take_16x16.png">
+      </activityIcon>
+      <activityIcon
+            activityTypeID="bw.asbw.Get"
+            diagramIcon="icons/obj48/get_48x48.png"
+            largeIcon="icons/obj32/get_32x32.png"
+            smallIcon="icons/obj16/get_16x16.png">
+      </activityIcon>
+      <activityIcon
+            activityTypeID="bw.asbw.WaitForReady"
+            diagramIcon="icons/obj48/waitforready_48x48.png"
+            largeIcon="icons/obj32/waitforready_32x32.png"
+            smallIcon="icons/obj16/waitforready_16x16.png">
+      </activityIcon>
+      <activityIcon
+            activityTypeID="bw.asbw.Lock"
+            diagramIcon="icons/obj48/lock_48x48.png"
+            largeIcon="icons/obj32/lock_32x32.png"
+            smallIcon="icons/obj16/lock_16x16.png">
+      </activityIcon>
+      <activityIcon
+            activityTypeID="bw.asbw.UnLock"
+            diagramIcon="icons/obj48/unlock_48x48.png"
+            largeIcon="icons/obj32/unlock_32x32.png"
+            smallIcon="icons/obj16/unlock_16x16.png">
+      </activityIcon>
+      <activityIcon
+            activityTypeID="bw.asbw.EntryBrowser"
+            diagramIcon="icons/obj48/entrybrowser_48x48.png"
+            largeIcon="icons/obj32/entrybrowser_32x32.png"
+            smallIcon="icons/obj16/entrybrowser_16x16.png">
+      </activityIcon>
+      <activityIcon
+            activityTypeID="bw.asbw.Snapshot"
+            diagramIcon="icons/obj48/snapshot_48x48.png"
+            largeIcon="icons/obj32/snapshot_32x32.png"
+            smallIcon="icons/obj16/snapshot_16x16.png">
+      </activityIcon>
+      <activityIcon
+            activityTypeID="bw.asbw.SnapshotIterator"
+            diagramIcon="icons/obj48/snapshotiteration_48x48.png"
+            largeIcon="icons/obj32/snapshotiteration_32x32.png"
+            smallIcon="icons/obj16/snapshotiteration_16x16.png">
+      </activityIcon>
+      <activityIcon
+            activityTypeID="bw.asbw.EventListener"
+            diagramIcon="icons/obj48/eventlistener_48x48.png"
+            largeIcon="icons/obj32/eventlistener_32x32.png"
+            smallIcon="icons/obj16/eventlistener_16x16.png">
+      </activityIcon>
+      <activityIcon
+            activityTypeID="bw.asbw.RemoteInvoke"
+            diagramIcon="icons/obj48/remoteInvoke_48x48.png"
+            largeIcon="icons/obj32/remoteInvoke_32x32.png"
+            smallIcon="icons/obj16/remoteInvoke_16x16.png">
+      </activityIcon>
+      
+       <activityIcon
+            activityTypeID="bw.asbw.PersisterInvocableReceiver"
+            diagramIcon="icons/obj48/persisterInvocableReceiver_48x48.png"
+            largeIcon="icons/obj32/persisterInvocableReceiver_32x32.png"
+            smallIcon="icons/obj16/persisterInvocableReceiver_16x16.png">
+      </activityIcon>
+      
+      <activityIcon
+            activityTypeID="bw.asbw.PersisterInvocableResponse"
+            diagramIcon="icons/obj48/persisterInvocableResponse_48x48.png"
+            largeIcon="icons/obj32/persisterInvocableResponse_32x32.png"
+            smallIcon="icons/obj16/persisterInvocableResponse_16x16.png">
+      </activityIcon>
+      <activityIcon
+            activityTypeID="bw.asbw.InvocableReceiver"
+            diagramIcon="icons/obj48/invocableReceiver_48x48.png"
+            largeIcon="icons/obj32/invocableReceiver_32x32.png"
+            smallIcon="icons/obj16/invocableReceiver_16x16.png">
+      </activityIcon>
+      
+       <activityIcon
+            activityTypeID="bw.asbw.InvocableResponse"
+            diagramIcon="icons/obj48/invocableResponse_48x48.png"
+            largeIcon="icons/obj32/invocableResponse_32x32.png"
+            smallIcon="icons/obj16/invocableResponse_16x16.png">
+      </activityIcon>
+      
+      <activityIcon
+            activityTypeID="bw.asbw.SpaceResultHandler"
+            diagramIcon="icons/obj48/spaceResultHandler_48x48.png"
+            largeIcon="icons/obj32/spaceResultHandler_32x32.png"
+            smallIcon="icons/obj16/spaceResultHandler_16x16.png">
+      </activityIcon>
+      
+      <activityIcon
+            activityTypeID="bw.asbw.SpaceSize"
+            diagramIcon="icons/obj48/spaceSize_48x48.png"
+            largeIcon="icons/obj32/spaceSize_32x32.png"
+            smallIcon="icons/obj16/spaceSize_16x16.png">
+      </activityIcon>
+      
+      <activityIcon
+            activityTypeID="bw.asbw.SpaceClear"
+            diagramIcon="icons/obj48/spaceClear_48x48.png"
+            largeIcon="icons/obj32/spaceClear_32x32.png"
+            smallIcon="icons/obj16/spaceClear_16x16.png">
+      </activityIcon>
+   </extension>
+</plugin>

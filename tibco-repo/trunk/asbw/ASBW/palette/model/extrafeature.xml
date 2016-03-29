@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="com.tibco.bw.palette.model.extrafeature"
+      label="%featureName"
+      version="6.0.100.qualifier"
+      provider-name="%providerName">
+
+   <description>
+      %description
+   </description>
+
+   <copyright>
+      %copyright
+   </copyright>
+
+   <license url="%licenseURL">
+      %license
+   </license>
+
+    <requires>
+      <import feature="com.tibco.bw.api.model.feature" version="6.3.0" match="compatible"/>
+      <import feature="com.tibco.bw.core.model.feature" version="6.3.0" match="compatible"/>
+      <import feature="com.tibco.tpcl.org.eclipse.wst.feature" version="1.2.350" match="compatible"/>
+      <import feature="com.tibco.tpcl.org.eclipse.xsd.feature" version="2.10.0" match="compatible"/>
+   </requires>
+
+</feature>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="bw.sharedresource.activespace.metaspace" configuration-policy="optional">
+   <implementation class="com.tibco.bw.sharedresource.activespace.runtime.metaspace.MetaspaceResourceFactory"/>
+   <service>
+      <provide interface="com.tibco.bw.sharedresource.runtime.configuration.SharedResourceFactory"/>
+   </service>
+   <property name="resource.type" type="String" value="{http://xsd.tns.tibco.com/bw/models/sharedresource/activespace}Metaspace"/>
+</scr:component>

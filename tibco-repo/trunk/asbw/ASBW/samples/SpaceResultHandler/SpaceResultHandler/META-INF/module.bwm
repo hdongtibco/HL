@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_sqkRwI6EEeWBg7QmWw_Hag" targetNamespace="http://tns.tibco.com/bw/composite/SpaceResultHandler" name="SpaceResultHandler" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:property xmi:id="_tM5iwI6EEeWBg7QmWw_Hag" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_tNR9QI6EEeWBg7QmWw_Hag" name="BW.DOMAIN.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_tNeKgI6EEeWBg7QmWw_Hag" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_tNqXwI6EEeWBg7QmWw_Hag" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_tN2lAI6EEeWBg7QmWw_Hag" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_tN8roI6EEeWBg7QmWw_Hag" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_tOI44I6EEeWBg7QmWw_Hag" name="BW.APPSPACE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_tOVGII6EEeWBg7QmWw_Hag" name="BW.DEPLOYMENTUNIT.TYPE" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_tObMwI6EEeWBg7QmWw_Hag" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:component xmi:id="_qwijII6GEeWBg7QmWw_Hag" name="ComponentPutHandler" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_qwijIY6GEeWBg7QmWw_Hag" processName="spaceresulthandler.PutHandler"/>
+  </sca:component>
+  <sca:component xmi:id="_tMgSMI8pEeWtaKNwtnqYAQ" name="ComponentLockHandler" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_tMgSMY8pEeWtaKNwtnqYAQ" processName="spaceresulthandler.LockHandler"/>
+  </sca:component>
+  <sca:component xmi:id="_t3Uw0I8pEeWtaKNwtnqYAQ" name="ComponentOperations" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_t3Uw0Y8pEeWtaKNwtnqYAQ" processName="spaceresulthandler.Operations"/>
+  </sca:component>
+  <sca:component xmi:id="_uYVMII8pEeWtaKNwtnqYAQ" name="ComponentTakeHandler" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_uYVMIY8pEeWtaKNwtnqYAQ" processName="spaceresulthandler.TakeHandler"/>
+  </sca:component>
+  <sca:component xmi:id="_u48l4I8pEeWtaKNwtnqYAQ" name="ComponentUnlockHandler" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_u48l4Y8pEeWtaKNwtnqYAQ" processName="spaceresulthandler.UnlockHandler"/>
+  </sca:component>
+</sca:composite>

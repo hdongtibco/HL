@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="com.tibco.bw.sharedresource.activespace.design.feature"
+      label="%featureName"
+      version="6.2.0.qualifier"
+      provider-name="%providerName">
+
+   <description>
+      %description
+   </description>
+
+   <copyright>
+      %copyright
+   </copyright>
+
+   <license url="%licenseURL">
+      %license
+   </license>
+
+   <requires>
+      <import feature="com.tibco.amf.design.core.feature" version="3.901.0" match="compatible"/>
+      <import feature="com.tibco.bw.api.design.feature" version="6.3.0" match="compatible"/>
+      <import feature="com.tibco.amf.sharedresource.model.feature.eclipse" version="3.901.0" match="compatible"/>
+      <import feature="com.tibco.neo.model.core.feature.eclipse" version="1.902.0" match="compatible"/>
+      <import feature="com.tibco.tibcoxml.xml.eclipse" version="5.60.100" match="compatible"/>
+      <import feature="com.tibco.tpcl.javax.jms.feature.eclipse" version="1.10.0" match="compatible"/> 
+      <import feature="com.tibco.bw.core.design.feature" version="6.3.0" match="compatible"/>
+      <import feature="com.tibco.as.common.feature" version="2.1.600" match="compatible"/>
+      <import feature="com.tibco.bw.sharedresource.activespace.model.feature" version="6.2.0" match="compatible"/>
+   </requires>
+
+   <plugin
+         id="com.tibco.bw.sharedresource.activespace.design"
+         download-size="0"
+         install-size="0"
+         version="6.2.0.qualifier"
+         unpack="false"/>
+</feature>

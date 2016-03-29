@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<project name="AS Build" default="asUnitTest">
+	<property name="rootPath" value=".." />
+	<property name="jdk.version" value="1.6" />
+	<property name="sourceForTest" value="../test-src" />
+	<property name="sourceForProject" value="../src/schema" />
+	<property name="tempBinLocation" value="../binASBW6ForTest" />
+	<property name="libPath" value="C:/libforASBW6Unittest" />
+
+	<property name="report" value="${sourceForTest}/report" />
+	<property name="report.xml" value="${report}/junit/xml" />
+	<property name="jarnameForASUnittest" value="asbw6WithUnitTest.jar" />
+	<property name="xmlpath" value="com/tibco/plugin/as/schema/" />
+	<property name="xmlnameForTestcase" value="as-meta-model-for-test.xml" />
+	<property name="propertypath" value="com/tibco/plugin/as/util/" />
+	<property name="propertyname" value="config.properties" />
+
+
+	<target name="asUnitTest" depends="jarTestCase">
+		<mkdir dir="${report.xml}" />
+		<junit printsummary="yes" haltonfailure="no">
+			<classpath>
+				<fileset dir="${libPath}">
+					<include name="**/*.jar" />
+				</fileset>
+			</classpath>
+			<formatter type="xml" />
+			<batchtest fork="yes" todir="${report.xml}">
+				<fileset dir="${sourceForTest}" includes="**/*Test.java" />
+			</batchtest>
+		</junit>
+		<junitreport todir="${report.xml}">
+			<fileset dir="${report.xml}">
+				<include name="*.xml" />
+			</fileset>
+		</junitreport>
+		<antcall target="cleanTempFolder" />
+	</target>
+
+	<target name="jarTestCase" depends="compileASProjectAndTestCase">
+		<antcall>
+			<target name="copyConfigFileForTesting" />
+		</antcall>
+		<jar destfile="${libPath}/${jarnameForASUnittest}" basedir="${tempBinLocation}" />
+	</target>
+
+	<target name="compileASProjectAndTestCase">
+		<antcall>
+			<target name="ensureNewTempPath">
+			</target>
+		</antcall>
+		<javac destdir="${tempBinLocation}" srcdir="${sourceForProject};${sourceForTest}" debug="false" debuglevel="source,lines,vars" source="${jdk.version}" target="${jdk.version}" includeantruntime="false">
+			<classpath>
+				<fileset dir="${libPath}">
+					<include name="**/*.jar" />
+				</fileset>
+			</classpath>
+		</javac>
+	</target>
+
+	<target name="ensureNewTempPath">
+		<delete dir="${tempBinLocation}" />
+		<mkdir dir="${tempBinLocation}" />
+	</target>
+
+	<target name="copyConfigFileForTesting">
+		<copy todir="${tempBinLocation}/${xmlpath}" file="${sourceForTest}/${xmlpath}${xmlnameForTestcase}" />
+		<copy todir="${tempBinLocation}/${propertypath}" file="${sourceForTest}/${propertypath}${propertyname}" />
+	</target>
+
+	<target name="cleanTempFolder">
+		<delete dir="${tempBinLocation}" />
+	</target>
+</project>

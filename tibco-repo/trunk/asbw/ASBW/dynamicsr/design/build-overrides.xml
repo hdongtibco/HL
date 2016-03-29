@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="sharedresource.design">
+
+<!-- 
+    ${repo}${autobuild.svn.tags-prefix}/tags${autobuild.svn.tags-suffix}/${autobuild.svn.tagname-base}-x.y.z.nnn/${autobuild.svn.tag-pattern}
+
+   ${repo}                        = bw
+   ${autobuild.svn.tags-prefix}   = <empty>
+   ${autobuild.svn.tags-suffix}   = /bw/{release-unit folder structure as in svn}
+   ${autobuild.svn.tagname-base}  = {two(or three) part release-unit name}
+   ${autobuild.svn.tag-pattern}   = {folder name as in svn, under which release-unit exists}
+   
+   Ex:
+   bw/tags/bw/sharedresource/design/sharedresource.design-6.0.0.001/design
+ -->
+
+    <property name="release-unit" value="sharedresource.design" />
+    <property name="feature" value="com.tibco.bw.sharedresource.activespace.design.feature" />
+    <property name="autobuild.repository" value="activespaces" />
+    <property name="autobuild.svn.tagname-base" value="as.bwplugin.ru" />
+    <property name="autobuild.svn.tags-suffix" value="/bwplugin/sharedresource.design" />
+    <!--property name="autobuild.svn.tag-pattern" value="design" /-->
+
+    <property name="autobuild.version.eclipse" value="4.4" />
+    <property name="autobuild.version.developer.eclipse" value="4.4" />
+
+    <property name="autobuild.p2.packaging" value="true" />
+
+    <property name="allow.binary.cycles" value="true" />
+	
+    <property name="autobuild.obfuscator.style" value="none"/>
+
+    <property name="pdms.virtual.product" value="activespace"/>
+    <property name="pdms.release.unit" value="activespace_res_design"/>
+
+    <property name="site.type" value="release"/>
+    <condition property="reldist.update.site"
+        value="http://reldist.na.tibco.com:${autobuild.spin.port}/reldist/${site.type}"
+        else="http://reldist.na.tibco.com/reldist/${site.type}">
+        <isset property="autobuild.spin.port" />
+    </condition>
+
+    <updatesites id="autobuild.workspace.update-sites.list">
+        <updatesite url="${reldist.update.site}"/>
+	<updatesite url="http://spin.tibco.com/milestones/thirdparty/"/> 
+	<updatesite url="http://spin.tibco.com/dev/release/"/> 
+    </updatesites>
+
+    <!-- this only happens for developer builds -->
+    <import file="${autobuild.dir.user}/bw/tools/build-overrides.xml" optional="true" />
+
+</project>

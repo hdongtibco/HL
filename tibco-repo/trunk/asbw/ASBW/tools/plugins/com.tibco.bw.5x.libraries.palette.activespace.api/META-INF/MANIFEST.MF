@@ -1,0 +1,22 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Api
+Bundle-SymbolicName: com.tibco.bw.5x.libraries.palette.activespace.api
+Bundle-Version: 1.2.0.qualifier
+Bundle-Vendor: TIBCO
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Fragment-Host: com.tibco.bw.5x.libraries.palette.api;bundle-version="[1.4.0,2.0.0)"
+Bundle-ClassPath: jars/bw/activespaces/lib/activespacesplugin.jar,
+ .
+Export-Package: 
+ com.tibco.plugin.as,
+ com.tibco.plugin.as.metaspace,
+ com.tibco.plugin.as.schema,
+ com.tibco.plugin.as.service,
+ com.tibco.plugin.as.ui,
+ com.tibco.plugin.helper,
+ com.tibco.plugin.share.as,
+ com.tibco.plugin.ui
+Require-Bundle: com.tibco.as.common;bundle-version="[2.1.600,3.0.0)",
+ com.tibco.tpcl.org.jdom.eclipse;bundle-version="[1.0.200,2.0.0)"
+

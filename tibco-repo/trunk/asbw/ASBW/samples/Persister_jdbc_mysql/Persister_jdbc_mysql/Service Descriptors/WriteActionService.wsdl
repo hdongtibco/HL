@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:tns="http://xmlns.example.com/20151201123348" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsd1="http://www.example.org/Tuple" name="WriteActionService" targetNamespace="http://xmlns.example.com/20151201123348">
+  <wsdl:types>
+    <xsd:schema elementFormDefault="unqualified" targetNamespace="http://xmlns.example.com/20151201123348">
+      <xsd:element name="WriteActionOperationRequest">
+        <xsd:complexType>
+        	<xsd:sequence>
+        		<xsd:element name="type" type="xsd:string"/>
+
+        		<xsd:element name="tuple" type="xsd:string"/>
+        	</xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="WriteActionOperationResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="out" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="WriteActionOperationFault">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="fault" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+
+
+
+
+
+
+      <xsd:complexType name="Tuple">
+      	<xsd:sequence>
+      		<xsd:element name="id" type="xsd:int"></xsd:element>
+      		<xsd:element name="value" type="xsd:string"></xsd:element>
+      	</xsd:sequence>
+      </xsd:complexType>
+      
+            <xsd:element name="wirterInputType" type="tns:NewType1"></xsd:element>
+        
+            <xsd:complexType name="NewType1">
+            	<xsd:sequence>
+            		<xsd:element name="actionType" type="xsd:string"></xsd:element>
+            		<xsd:element name="Tuple" type="tns:Tuple"></xsd:element>
+            	</xsd:sequence>
+            </xsd:complexType>
+    </xsd:schema>
+    <xsd:schema>
+    	<xsd:import namespace="http://www.example.org/Tuple" schemaLocation="../Schemas/Tuple.xsd">
+    	</xsd:import>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="WriteActionOperationRequest">
+    <wsdl:part name="parameters" element="tns:wirterInputType" />
+  </wsdl:message>
+  <wsdl:message name="WriteActionOperationResponse">
+    <wsdl:part element="tns:WriteActionOperationResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="WriteActionOperationFault">
+    <wsdl:part element="tns:WriteActionOperationFault" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="NewOperationRequest">
+  	<wsdl:part element="tns:NewOperation" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="NewOperationResponse">
+  	<wsdl:part element="tns:NewOperationResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:portType name="WriteActionService">
+    <wsdl:operation name="WriteActionOperation">
+      <wsdl:input message="tns:WriteActionOperationRequest" name="operationInput"/>
+      <wsdl:output message="tns:WriteActionOperationResponse" name="operationOutput"/>
+      <wsdl:fault message="tns:WriteActionOperationFault" name="Fault"/>
+    </wsdl:operation>
+
+  </wsdl:portType>
+</wsdl:definitions>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>---Universal Installer Silent Installation Properties---</comment>
+
+<!--accept the license agreement-->
+<entry key="acceptLicense">true</entry>
+
+<!--If multiple environments are supported, create a new one or use an existing one. Set createNewEnvironment to false if using an existing environment -->
+<!--If the product does not support multiple environments, then the values below are ignored-->
+<entry key="createNewEnvironment">true</entry>
+
+<!--the root installation directory-->
+<!--if the product does not support multiple instances and TIBCO_HOME has already been set then-->
+<!--this value is ignored and the existing TIBCO_HOME is used as the installation root-->
+<entry key="installationRoot">C:\tibco\bw</entry>
+
+<!--If using an existing environment then the installationRoot AND environmentName MUST match a pre-existing environment-->
+<!--If creating a new environment then the installationRoot AND environmentName MUST BE UNIQUE and not match a pre-existing environment-->
+<entry key="environmentName">bw6</entry>
+
+<!-- configDirectoryRoot - location of configuration files if it is not already defined for the TIBCO HOME instance. Configuration files will be added to configDirectoryRoot/tibco/cfgmgmt -->
+<entry key="configDirectoryRoot">C:\tibco\bw</entry>
+
+
+<!--Profiles Selection-->
+<!-- The 'selectedProfiles' value is a  comma separated list of profiles to install. If a profile is listed which does not exist, then it is ignored. At least one profile must be listed if useInstallProfile is set to true -->
+<entry key="useInstallProfile">true</entry>
+<entry key="selectedProfiles">Typical</entry>
+
+</properties>

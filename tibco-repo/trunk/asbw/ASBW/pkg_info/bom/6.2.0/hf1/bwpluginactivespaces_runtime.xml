@@ -1,0 +1,10 @@
+<?xml  version="1.0"?>
+<components>
+	<component name="bwpluginactivespaces_runtime" type="common">
+		<include file="aliases_bwpluginactivespaces.xml" />
+		<file src="${bldsrcdir}/lib/bwextension.ini" dest="lib/bwextension.ini" perm="755" plat="${ALL}"/>
+		<!--<dir src="${bldsrcdir}/bin" dest="" plat="${ALL}"/>-->
+		<!--<dir src="${bldsrcdir}/doc" dest="" plat="${ALL}"/>-->
+		<!--<dir src="${bldsrcdir}/hotfix" dest="" plat="${ALL}"/>-->
+	</component>
+</components>

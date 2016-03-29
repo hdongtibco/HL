@@ -1,0 +1,56 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: BW ActiveSpaces Palette Runtime
+Bundle-SymbolicName: com.tibco.bw.palette.activespace.runtime
+Bundle-Version: 6.2.1.qualifier
+Export-Package: com.tibco.bw.palette.activespace.runtime;version="6.2.1";
+  uses:="com.tibco.neo.localized,
+   com.tibco.bw.runtime,
+   javax.activation,
+   com.tibco.neo.localized"
+Import-Package: com.tibco.as.space;version="[2.1.600,3.0.0)",
+ com.tibco.as.space.browser;version="[2.1.600,3.0.0)",
+ com.tibco.as.space.event;version="[2.1.600,3.0.0)",
+ com.tibco.as.space.listener;version="[2.1.600,3.0.0)",
+ com.tibco.as.space.persistence;version="[2.1.600,3.0.0)",
+ com.tibco.as.space.remote;version="[2.1.600,3.0.0)",
+ com.tibco.bw.palette.activespace.model.as;version="[6.2.0,7.0.0)",
+ com.tibco.bw.runtime;version="[6.3.0,7.0.0)",
+ com.tibco.bw.runtime.annotation;version="[6.3.0,7.0.0)",
+ com.tibco.bw.runtime.util;version="[6.3.0,7.0.0)",
+ com.tibco.bw.sharedresource.activespace.model.schema;version="[6.2.0,7.0.0)",
+ com.tibco.bw.sharedresource.activespace.runtime.metaspace;version="[6.2.0,7.0.0)",
+ com.tibco.bw.sharedresource.activespace.runtime.space;version="[6.2.0,7.0.0)",
+ com.tibco.bw.sharedresource.activespace.runtime.spaceconnection;version="[6.2.0,7.0.0)",
+ com.tibco.neo.localized;version="[2.5.100,3.0.0)",
+ com.tibco.tpcl.org.eclipse.emf;version="[2.10.1,3.0.0)",
+ org.eclipse.emf.ecore;version="[2.10.1,3.0.0)",
+ org.eclipse.emf.ecore.resource;version="[2.10.1,3.0.0)",
+ org.eclipse.xsd;version="[2.10.0,3.0.0)",
+ org.eclipse.xsd.util;version="[2.10.0,3.0.0)",
+ org.genxdm;version="[1.2.0,2.0.0)",
+ org.genxdm.axes;version="[1.2.0,2.0.0)",
+ org.genxdm.bridgekit.xs;version="[1.2.0,2.0.0)",
+ org.genxdm.exceptions;version="1.2.0",
+ org.genxdm.io;version="[1.2.0,2.0.0)",
+ org.genxdm.mutable;version="[1.2.0,2.0.0)",
+ org.genxdm.nodes;version="[1.2.0,2.0.0)",
+ org.genxdm.processor.w3c.xs;version="[1.2.0,2.0.0)",
+ org.genxdm.processor.w3c.xs.validation;version="[1.2.0,2.0.0)",
+ org.genxdm.typed;version="[1.2.0,2.0.0)",
+ org.genxdm.typed.types;version="[1.2.0,2.0.0)",
+ org.genxdm.xs;version="[1.2.0,2.0.0)",
+ org.genxdm.xs.components;version="[1.2.0,2.0.0)",
+ org.genxdm.xs.constraints;version="[1.2.0,2.0.0)",
+ org.genxdm.xs.exceptions;version="[1.2.0,2.0.0)",
+ org.genxdm.xs.resolve;version="[1.2.0,2.0.0)",
+ org.genxdm.xs.types;version="[1.2.0,2.0.0)",
+ org.slf4j;version="[1.2.0,2.0.0)"
+Bundle-Vendor: TIBCO Software Inc.
+Service-Component:  OSGI-INF/put.xml, OSGI-INF/take.xml, OSGI-INF/get.xml, OSGI-INF/begintransaction.xml,OSGI-INF/waitforready.xml, OSGI-INF/rollbacktransaction.xml, OSGI-INF/committransaction.xml, OSGI-INF/lock.xml,OSGI-INF/unlock.xml, OSGI-INF/entrybrowser.xml, OSGI-INF/snapshot.xml, OSGI-INF/snapshotiterator.xml, OSGI-INF/remoteInvoke.xml, OSGI-INF/eventlistener.xml, 
+ OSGI-INF/invocableReceiver.xml,OSGI-INF/invocableResponse.xml,OSGI-INF/persisterInvocableResponse.xml,OSGI-INF/persisterInvocableReceiver.xml, OSGI-INF/spaceResultHanlder.xml,OSGI-INF/spaceSize.xml, OSGI-INF/spaceClear.xml
+Provide-Capability: com.tibco.bw.palette; name=bw.activespace
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Require-Capability: com.tibco.bw.sharedresource.model; filter:="(name=bw.activespace)"
+Bundle-ClassPath: jar/joda-time-2.2.jar,
+ .

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:tns="http://xmlns.example.com/20151126144903" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="AlterActionService" targetNamespace="http://xmlns.example.com/20151126144903">
+  <wsdl:types>
+    <xsd:schema elementFormDefault="unqualified" targetNamespace="http://xmlns.example.com/20151126144903">
+      <xsd:element name="alterActionOperationRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="in" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="alterActionOperationResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="out" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="alterActionOperationFault">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="fault" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="alterActionOperationRequest">
+    <wsdl:part element="tns:alterActionOperationRequest" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="alterActionOperationResponse">
+    <wsdl:part element="tns:alterActionOperationResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="alterActionOperationFault">
+    <wsdl:part element="tns:alterActionOperationFault" name="parameters"/>
+  </wsdl:message>
+  <wsdl:portType name="AlterActionService">
+    <wsdl:operation name="alterActionOperation">
+      <wsdl:input message="tns:alterActionOperationRequest" name="operationInput"/>
+      <wsdl:output message="tns:alterActionOperationResponse" name="operationOutput"/>
+      <wsdl:fault message="tns:alterActionOperationFault" name="Fault"/>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

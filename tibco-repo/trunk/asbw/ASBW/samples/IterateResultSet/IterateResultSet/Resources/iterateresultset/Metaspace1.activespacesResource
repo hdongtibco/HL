@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:assr="http://xsd.tns.tibco.com/bw/models/sharedresource/activespace" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_F76lMZI8EeOzI7PD4HB2Qg" name="iterateresultset.Metaspace1" type="assr:Metaspace">
+  <jndi:configuration xsi:type="assr:Metaspace" xmi:id="_F76lMpI8EeOzI7PD4HB2Qg" metaspaceName="ms">
+    <dynamicFieldAttrs xmi:id="_F8qMEJI8EeOzI7PD4HB2Qg" fieldId="MemberName" fieldType="string"/>
+    <dynamicFieldAttrs xmi:id="_F8qMEZI8EeOzI7PD4HB2Qg" fieldId="Discovery" fieldType="string"/>
+    <dynamicFieldAttrs xmi:id="_F8qMEpI8EeOzI7PD4HB2Qg" fieldId="Listen" fieldType="string"/>
+    <dynamicFieldAttrs xmi:id="_F8qME5I8EeOzI7PD4HB2Qg" fieldId="RemoteListen" fieldType="string"/>
+    <dynamicFieldAttrs xmi:id="_F8qMFJI8EeOzI7PD4HB2Qg" fieldId="WorkerThreadCount" fieldType="integer" fieldValue="32"/>
+    <dynamicFieldAttrs xmi:id="_F8qMFZI8EeOzI7PD4HB2Qg" fieldId="ConnectTimeout" fieldType="long"/>
+    <dynamicFieldAttrs xmi:id="_F8qMFpI8EeOzI7PD4HB2Qg" fieldId="DataStore" fieldType="string"/>
+    <dynamicFieldAttrs xmi:id="_F8qMF5I8EeOzI7PD4HB2Qg" fieldId="SecurityPolicyFile" fieldType="string"/>
+    <dynamicFieldAttrs xmi:id="_F8qMGJI8EeOzI7PD4HB2Qg" fieldId="SecurityTokenFile" fieldType="string"/>
+  </jndi:configuration>
+</jndi:namedResource>

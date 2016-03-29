@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="tools.migrator">
+
+<!-- 
+    ${repo}${autobuild.svn.tags-prefix}/tags${autobuild.svn.tags-suffix}/${autobuild.svn.tagname-base}-x.y.z.nnn/${autobuild.svn.tag-pattern}
+
+   ${repo}                        = bw
+   ${autobuild.svn.tags-prefix}   = <empty>
+   ${autobuild.svn.tags-suffix}   = /bw/{release-unit folder structure as in svn}
+   ${autobuild.svn.tagname-base}  = {two(or three) part release-unit name}
+   ${autobuild.svn.tag-pattern}   = {folder name as in svn, under which release-unit exists}
+   
+   Ex:
+   bw/tags/bw/tools/tools-6.0.0.001/tools
+ -->
+
+    <property name="release-unit" value="tools.migrator" />
+	<property name="feature" value="com.tibco.bw.tools.migrator.activespace.feature" />
+    <property name="autobuild.repository" value="activespaces" />
+    <property name="autobuild.svn.tags-suffix" value="/bwplugin/tools.migrator" />
+    <!--property name="autobuild.svn.tag-pattern" value="tools" /-->
+
+    <property name="autobuild.version.eclipse" value="4.4" />
+    <property name="autobuild.version.developer.eclipse" value="4.4" />
+
+    <property name="autobuild.obfuscator.style" value="none"/>
+    <property name="autobuild.p2.packaging" value="true" />
+    
+    <!--<property name="autobuild.workspace.extra-feature" location="extrafeature.xml"/>-->
+
+    <property name="pdms.virtual.product" value="activespace" />
+    <property name="pdms.release.unit" value="activespace_migrator" />
+
+    <property name="site.type" value="release"/>
+    <condition property="reldist.update.site"
+        value="http://reldist.na.tibco.com:${autobuild.spin.port}/reldist/${site.type}"
+        else="http://reldist.na.tibco.com/reldist/${site.type}">
+        <isset property="autobuild.spin.port" />
+    </condition>
+
+    <updatesites id="autobuild.workspace.update-sites.list">
+        <updatesite url="${reldist.update.site}"/>
+	<updatesite url="http://spin.tibco.com:8008/dev/release/"/> 
+    </updatesites>
+
+    <!-- this only happens for developer builds -->
+    <import file="${autobuild.dir.user}/bw/tools/build-overrides.xml" optional="true" />
+  <property name="official-release-build" value="true" />
+</project>

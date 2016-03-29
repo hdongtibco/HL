@@ -1,0 +1,7 @@
+<?xml  version="1.0"?>
+<components>
+	<component name="bwpluginactivespaces_samples" type="common">
+		<include file="aliases_bwpluginactivespaces.xml" />
+		<dir src="${bldsrcdir}/samples" dest="" plat="${ALL}"/>
+	</component>
+</components>

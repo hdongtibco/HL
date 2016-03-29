@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.tibco.bw.sharedresource.activespace.model/src"
+    modelPluginID="com.tibco.bw.sharedresource.activespace.model" editPluginClass="ed"
+    importerID="org.eclipse.emf.importer.ecore" bundleManifest="false" complianceLevel="6.0"
+    copyrightFields="false" runtimeVersion="2.4" usedGenPackages="platform:/plugin/com.tibco.neo.model.core.eclipse/model/SvarModel.genmodel#//svarmodel platform:/plugin/com.tibco.neo.model.core.eclipse/model/ComponentJar.genmodel#//componentjar">
+  <foreignModel>sharedresource.activityspace.ecore</foreignModel>
+  <genPackages prefix="Assr" basePackage="com.tibco.bw.sharedresource.activespace.model"
+      disposableProviderFactory="true" ecorePackage="sharedresource.activityspace.ecore#/">
+    <genClasses ecoreClass="sharedresource.activityspace.ecore#//Metaspace">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sharedresource.activityspace.ecore#//Metaspace/dynamicFieldAttrs"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sharedresource.activityspace.ecore#//Metaspace/spaces"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sharedresource.activityspace.ecore#//Metaspace/metaspaceName"/>
+    </genClasses>
+    <genClasses ecoreClass="sharedresource.activityspace.ecore#//Space">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sharedresource.activityspace.ecore#//Space/spaceName"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sharedresource.activityspace.ecore#//Space/fieldDefinitions"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sharedresource.activityspace.ecore#//Space/keyDefinition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sharedresource.activityspace.ecore#//Space/dynamicFieldAttrs"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sharedresource.activityspace.ecore#//Space/indexDefinitions"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sharedresource.activityspace.ecore#//Space/spaceConnection"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sharedresource.activityspace.ecore#//Space/editable"/>
+    </genClasses>
+    <genClasses ecoreClass="sharedresource.activityspace.ecore#//SpaceConnection">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sharedresource.activityspace.ecore#//SpaceConnection/spaceConnectionName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sharedresource.activityspace.ecore#//SpaceConnection/distributionRole"/>
+    </genClasses>
+    <genClasses ecoreClass="sharedresource.activityspace.ecore#//SpaceFieldDefinition">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sharedresource.activityspace.ecore#//SpaceFieldDefinition/dynamicFieldAttrs"/>
+    </genClasses>
+    <genClasses ecoreClass="sharedresource.activityspace.ecore#//SpaceKeyDefinition">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sharedresource.activityspace.ecore#//SpaceKeyDefinition/dynamicFieldAttrs"/>
+    </genClasses>
+    <genClasses ecoreClass="sharedresource.activityspace.ecore#//SpaceIndexDefinition">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sharedresource.activityspace.ecore#//SpaceIndexDefinition/dynamicFieldAttrs"/>
+    </genClasses>
+    <genClasses ecoreClass="sharedresource.activityspace.ecore#//DynamicUIField">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sharedresource.activityspace.ecore#//DynamicUIField/fieldId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sharedresource.activityspace.ecore#//DynamicUIField/fieldType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sharedresource.activityspace.ecore#//DynamicUIField/fieldValue"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

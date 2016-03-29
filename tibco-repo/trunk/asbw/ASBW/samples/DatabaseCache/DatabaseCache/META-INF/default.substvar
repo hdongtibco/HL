@@ -1,0 +1,37 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<repository xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance" xmlns = "http://www.tibco.com/xmlns/repo/types/2002">
+	<globalVariables>
+		<globalVariable>
+			<name>BaseDir</name>
+			<value>C:\tibco\bw\palettes\activespaces\6.0\samples\DatabaseCache\data\</value>
+			<deploymentSettable>false</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<modTime>1389766991314</modTime>
+		</globalVariable>
+		<globalVariable>
+			<name>DatabaseFileName</name>
+			<value>database.data</value>
+			<deploymentSettable>false</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<modTime>1389766991314</modTime>
+		</globalVariable>
+		<globalVariable>
+			<name>InputFileName</name>
+			<value>C:\tibco\bw\palettes\activespaces\6.0\samples\DatabaseCache\data\input.txt</value>
+			<deploymentSettable>false</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<modTime>1389766991314</modTime>
+		</globalVariable>
+		<globalVariable>
+			<name>OutputFileName</name>
+			<value>output.txt</value>
+			<deploymentSettable>false</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<modTime>1389766991314</modTime>
+		</globalVariable>
+	</globalVariables>
+</repository>

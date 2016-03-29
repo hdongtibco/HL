@@ -1,0 +1,13 @@
+<project name="ec_client_call" basedir=".">
+<import file="ec_client_call_common.xml"/>
+
+<target name="package" depends="setConditions,setwin,setlnx,setmac,-testClientExistence,-getClients" >
+	<echo> ostype ${ostype} </echo>
+	<antcall target="login" />
+    
+	<FULL-test-installpackaging-procedure enable-zipassembly-creation="true" featureconfig-file="product_bwpluginactivespaces_6.0.1_FeatureConfig.xml" svn-url="http://svn.tibco.com/activespaces/branches/bwplugin/6.0/pkg_info/bom/6.0.1/base" svn-revision="HEAD" recipient-email-address="akrishna@tibco.com" assembly-id="all" set-environment-variables="bldsrcdir=/local/relbuild/bwpluginactivespaces_601_test/6.0" override-default-export-dir="/local/tibco/export_dir" ports="all"/>
+
+	<echo> Please see status of job at https://commander.na.tibco.com:5443/commander/jobs.php </echo>
+</target>
+</project>
+

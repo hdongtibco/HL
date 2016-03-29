@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:tns="http://xmlns.example.com/20151126144242" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="LoadActionService" targetNamespace="http://xmlns.example.com/20151126144242">
+  <wsdl:types>
+    <xsd:schema elementFormDefault="unqualified" targetNamespace="http://xmlns.example.com/20151126144242">
+      <xsd:element name="loadActionOperationRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="in" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="loadActionOperationResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="out" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="loadActionOperationFault">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="fault" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="loadActionOperationRequest">
+    <wsdl:part element="tns:loadActionOperationRequest" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="loadActionOperationResponse">
+    <wsdl:part element="tns:loadActionOperationResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="loadActionOperationFault">
+    <wsdl:part element="tns:loadActionOperationFault" name="parameters"/>
+  </wsdl:message>
+  <wsdl:portType name="LoadActionService">
+    <wsdl:operation name="loadActionOperation">
+      <wsdl:input message="tns:loadActionOperationRequest" name="operationInput"/>
+      <wsdl:output message="tns:loadActionOperationResponse" name="operationOutput"/>
+      <wsdl:fault message="tns:loadActionOperationFault" name="Fault"/>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

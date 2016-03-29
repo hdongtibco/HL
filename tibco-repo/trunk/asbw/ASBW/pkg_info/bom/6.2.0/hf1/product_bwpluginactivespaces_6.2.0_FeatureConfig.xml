@@ -1,0 +1,111 @@
+<?xml  version="1.0"?>
+<TIBCOInstallerFeatures>
+   <productDef 
+   		name="TIBCO ActiveMatrix BusinessWorks(TM) Plug-in for ActiveSpaces 6.2.0 Hotfix 1" 
+   		version="6.2.0.001" 
+		hotfix_number="1"
+   		id="bwpluginactivespaces" 
+   		releaseType="hotfix"    	
+		productType="hotfix"		
+   		supportedPlatforms="platform-independent"
+   		compatDisplayName="TIBCO ActiveMatrix BusinessWorks(TM) Plug-in for ActiveSpaces Hotfix 1" 
+   		compatType="bwpluginactivespaces" 
+		emailalias="sashinde@tibco.com"
+   		universalinstallerrelease="3.4.2" 
+   		universalinstallerversion="V1"/>
+	
+    <customVariables>
+        <localVariable name="bwpluginactivespaces.minimum.bw.version" value="6.2.0"/>
+		<localVariable name="bwpluginactivespaces.base.as.version" value="2.1.600" />
+		<localVariable name="bwpluginactivespaces.extension.palettes.home" value="${tibco.home.esc}/bw/palettes/activespaces/6.2"/>
+		<localVariable name="bwpluginactivespaces.extension.palettes.runtime.home" value="${tibco.home.esc}/bw/palettes/activespaces/6.2/hotfix/runtime"/>
+		<localVariable name="bwpluginactivespaces.extension.palettes.design.home" value="${tibco.home.esc}/bw/palettes/activespaces/6.2/hotfix/design"/>
+		<localVariable name="bwpluginactivespaces.palette.full.name" value="TIBCO BW ActiveSpaces Palette"/>
+		<localVariable name="bwpluginactivespaces.palette.short.name" value="activespaces"/>
+		<localVariable name="bwpluginactivespaces.palette.package.name" value="com.tibco.bw.palette"/>
+		<localVariable name="bwpluginactivespaces.palette.ius" value="com.tibco.bw.palette.activespace.design.feature.feature.group"/>
+		<localVariable name="bwpluginactivespaces.palette.install.tag" value="TIBCO BW ActiveSpaces Palette Features Installation"/>
+		<localVariable name="bwpluginactivespaces.palette.uninstall.tag" value="TIBCO BW ActiveSpaces Palette Features Uninstallation"/>
+
+    </customVariables>
+    
+    <installProfile name="Runtime" uid="runtime-profile" description=""/>
+    <installProfile description="Installs all components of the product" name="Typical" uid="typical" defaultSelected="true"/>
+	<installerFeatureNode name="TIBCO ActiveMatrix BusinessWorks(TM) Plug-in for ActiveSpaces Runtime Hotfix 1" nodeID="runtime-node" parentNode="root"/>
+	 <installerFeatureNode name="TIBCO ActiveMatrix BusinessWorks(TM) Plug-in for ActiveSpaces Design Hotfix 1" nodeID="design-node" parentNode="root"/>
+	 
+    <installerFeature name="runtime hotfix 1" visible="true" version="6.2.0" parentNode="runtime-node" profileUID="runtime-profile">
+        <assemblyList>
+			<assembly uid="assembly_tibco_com_tibco_bw_palette_activespace_runtime_feature" overrideTargetDirectory="$L{bwpluginactivespaces.extension.palettes.runtime.home}" version="6.2.1" />
+			<assembly uid="assembly_tibco_com_tibco_bw_sharedresource_activespace_runtime_feature"  overrideTargetDirectory="$L{bwpluginactivespaces.extension.palettes.runtime.home}" version="6.2.1"/>
+			<assembly uid="product_tibco_bwpluginactivespaces_runtime"  overrideTargetDirectory="$L{bwpluginactivespaces.extension.palettes.home}" version="6.2.0"/>
+        </assemblyList>
+
+        <dependency description="TIBCO ActiveMatrix BusinessWorks(TM) Plug-in for ActiveSpaces Runtime" type="feature" uid="runtime_bwpluginactivespaces" version="6.2.0"/>
+		<wizardAction sequence="post-selection" class="com.tibco.installer.wizard.action.TIBCOCheckForInstallLoc">
+			<property productAcronym="BW"/>
+			<property minimumVersion="$L{bwpluginactivespaces.minimum.bw.version}"/>
+			<property vpdUID="BW_runtime"/>
+			<property productAssemblyUID="product_tibco_com_tibco_bw_enterprise_runtime"/>
+			<property productAssemblyMinVersion="$L{bwpluginactivespaces.minimum.bw.version}"/>
+			<property showProgress="true"/>
+			<property description="Get install location for BW Runtime"/>
+		</wizardAction>
+
+		<postInstallAction sequence="pre-install-ref" target="clean-ext-palette-hotfix" taskFile="${tibco.home}/thor/scripts/build.xml">
+			<postInstallActionProperty name="bw.home" value="${tibco.BW.home}"/>
+			<postInstallActionProperty name="bw.home.esc" value="${tibco.BW.home.esc}"/>
+			<postInstallActionProperty name="ext.palette.location" value="$L{bwpluginactivespaces.extension.palettes.home}"/>
+		</postInstallAction>
+		<postInstallAction sequence="pre-install-ref" target="clean-ext-shared-hotfix" taskFile="${tibco.home}/thor/scripts/build.xml">
+			<postInstallActionProperty name="bw.home" value="${tibco.BW.home}"/>
+			<postInstallActionProperty name="bw.home.esc" value="${tibco.BW.home.esc}"/>
+			<postInstallActionProperty name="ext.palette.location" value="$L{bwpluginactivespaces.extension.palettes.home}"/>
+		</postInstallAction>
+    </installerFeature>
+	
+	<installerFeature name="design hotfix 1" visible="true" version="6.2.0" parentNode="design-node" profileUID="typical">
+		<assemblyList>
+			<assembly overrideTargetDirectory="$L{bwpluginactivespaces.extension.palettes.design.home}" uid="assembly_tibco_com_tibco_bw_palette_activespace_design_feature" version="6.2.1"/>
+ 
+		</assemblyList>
+		<dependency description="TIBCO ActiveMatrix BusinessWorks(TM) Plug-in for ActiveSpaces - Runtime" type="feature" uid="runtime hotfix 1_bwpluginactivespaces" version="6.2.0"/>
+		 <dependency description="TIBCO ActiveMatrix BusinessWorks(TM) Plug-in for ActiveSpaces Design" type="feature" uid="design_bwpluginactivespaces" version="6.2.0"/>
+		 
+		<postInstallAction sequence="post-assembly-ref" target="install-ext-palette-design-hf" taskFile="${tibco.BW.home}/scripts/build.xml">
+			<postInstallActionProperty name="bw.home" value="${tibco.BW.home}"/>
+			<postInstallActionProperty name="bw.home.esc" value="${tibco.BW.home.esc}"/>
+			<postInstallActionProperty name="ext.palette.short.name" value="$L{bwpluginactivespaces.palette.short.name}"/>
+			<postInstallActionProperty name="ext.palette.package.name" value="$L{bwpluginactivespaces.palette.package.name}"/>
+			<postInstallActionProperty name="ext.palette.location" value="$L{bwpluginactivespaces.extension.palettes.home}"/>
+			<postInstallActionProperty name="ext.palette.install.ius" value="$L{bwpluginactivespaces.palette.ius}"/>
+			<postInstallActionProperty name="ext.palette.install.tag" value="$L{bwpluginactivespaces.palette.install.tag}"/>
+		</postInstallAction>
+
+<!-- PRE-UN-INSTALL -->
+		<postInstallAction sequence="pre-assembly-uninstall-ref" target="uninstall-ext-palette-design-hf" taskFile="${tibco.BW.home}/scripts/build.xml">
+			<condition class="com.tibco.installer.wizard.condition.TIBCOFeatureSelectedWizardCondition">
+				<property mustBeMet="false"/>
+				<property featureID="design_bwpluginactivespaces"/>
+			</condition>
+			<postInstallActionProperty name="bw.home" value="${tibco.BW.home}"/>
+			<postInstallActionProperty name="bw.home.esc" value="${tibco.BW.home.esc}"/>
+			<postInstallActionProperty name="ext.palette.short.name" value="$L{bwpluginactivespaces.palette.short.name}"/>
+			<postInstallActionProperty name="ext.palette.package.name" value="$L{bwpluginactivespaces.palette.package.name}"/>
+			<postInstallActionProperty name="ext.palette.location" value="$L{bwpluginactivespaces.extension.palettes.home}"/>
+			<postInstallActionProperty name="ext.palette.uninstall.ius" value="$L{bwpluginactivespaces.palette.ius}"/>
+			<postInstallActionProperty name="ext.palette.uninstall.tag" value="$L{bwpluginactivespaces.palette.uninstall.tag}"/>
+		</postInstallAction>
+		<postInstallAction sequence="post-assembly-ref" target="setup-bwthor-launch" taskFile="${tibco.BW.home}/scripts/build.xml">
+           <postInstallActionProperty name="bw.home" value="${tibco.BW.home}"/>
+           <postInstallActionProperty name="bw.home.esc" value="${tibco.BW.home.esc}"/>
+       </postInstallAction>
+	   <postInstallAction sequence="post-uninstall-ref" target="setup-bwthor-launch" taskFile="${tibco.BW.home}/scripts/build.xml">
+           <postInstallActionProperty name="bw.home" value="${tibco.BW.home}"/>
+           <postInstallActionProperty name="bw.home.esc" value="${tibco.BW.home.esc}"/>
+       </postInstallAction>
+
+
+</installerFeature>
+
+</TIBCOInstallerFeatures>

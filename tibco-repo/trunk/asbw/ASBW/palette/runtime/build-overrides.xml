@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="palette.runtime">
+
+<!-- 
+    ${repo}${autobuild.svn.tags-prefix}/tags${autobuild.svn.tags-suffix}/${autobuild.svn.tagname-base}-x.y.z.nnn/${autobuild.svn.tag-pattern}
+
+   ${repo}                        = bw
+   ${autobuild.svn.tags-prefix}   = <empty>
+   ${autobuild.svn.tags-suffix}   = /bw/{release-unit folder structure as in svn}
+   ${autobuild.svn.tagname-base}  = {two(or three) part release-unit name}
+   ${autobuild.svn.tag-pattern}   = {folder name as in svn, under which release-unit exists}
+   
+   Ex:
+   bw/tags/bw/palette/runtime/palette.runtime-6.0.0.001/runtime
+ -->
+
+    <property name="release-unit" value="palette.runtime" />
+    <property name="feature" value="com.tibco.bw.palette.activespace.runtime.feature" />
+    <property name="autobuild.repository" value="activespaces" />
+    <property name="autobuild.svn.tags-suffix" value="/bwplugin/palette.runtime" />
+    <!--property name="autobuild.svn.tag-pattern" value="runtime" /-->
+    
+    <property name="autobuild.version.eclipse" value="4.4" />
+    <property name="autobuild.version.developer.eclipse" value="4.4" />
+
+    <property name="autobuild.obfuscator.style" value="none"/> <!--whether want to obfuscate class-->
+    <property name="pdms.virtual.product" value="activespace" />      <!--product name in pdms-->
+    <property name="pdms.release.unit" value="activespace_runtime" /> <!--unit name in pdms-->
+    <property name="site.type" value="release"/>
+    <property name="reldist.download.enable" value="true"/>
+    <updatesites id="autobuild.workspace.update-sites.list">
+	<updatesite url="http://spin.tibco.com:8008/dev/release/"/> 
+    </updatesites>
+    <property name="match.build.number" value="true" />
+
+    <!--property name="autobuild.workspace.extra-feature" location="extrafeature.xml"/-->
+    <!-- this only happens for developer builds -->
+    <import file="${autobuild.dir.user}/bw/tools/build-overrides.xml" optional="true" />
+
+</project>
