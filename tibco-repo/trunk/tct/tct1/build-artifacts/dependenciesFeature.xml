@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feature id="FOS.extension.site"
+         version="2.1.0.001.2016-03-29-0629"
+         label="FOS Dependencies Feature">
+    <requires>
+        <import feature="com.tibco.customwizard.feature"
+                version="1.4.0.009"
+                match="perfect" />
+        <import feature="com.tibco.tct.framework.feature"
+                version="1.4.0.030"
+                match="perfect" />
+    </requires>
+</feature>
