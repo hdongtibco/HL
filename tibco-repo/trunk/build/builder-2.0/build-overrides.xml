@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="TIBCO Builder: Overrides">
+
+    <!-- Each Release Unit should change the project name above and the two
+         property definitions below. -->
+    <property name="release-unit" value="builder" />
+    <property name="feature" value="com.tibco.devtools.builder" />
+
+    <!-- The repository name is only used to separate release unit configurations,
+         preventing confusion of thirdparty common with neo common, for instance. -->
+    <property name="autobuild.repository" value="devtools" />
+  <property name="autobuild.version.developer.eclipse"
+              value="3.7" />
+    <property name="autobuild.version.eclipse"
+              value="3.7" />
+    <property name="official-release-build" value="true" />
+</project>

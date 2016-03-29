@@ -1,0 +1,21 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: TIBCO Development Tools Build Scripts
+Bundle-SymbolicName: com.tibco.devtools.buildscripts
+Bundle-Version: 1.1.0.qualifier
+Bundle-Vendor: TIBCO Software Inc.
+Export-Package: com.tibco.devtools.buildscripts;version="1.1.0";uses:="com.tibco.devtools.buildscripts.tasks",
+ com.tibco.devtools.buildscripts.resources;version="1.1.0";uses:="com.tibco.devtools.buildscripts",
+ com.tibco.devtools.buildscripts.selectors;version="1.1.0";uses:="com.tibco.devtools.buildscripts",
+ com.tibco.devtools.buildscripts.tasks;version="1.1.0";uses:="com.tibco.devtools.buildscripts.resources,com.tibco.devtools.buildscripts",
+ com.tibco.devtools.buildscripts.tasks.optional;version="1.1.0";uses:="com.tibco.devtools.buildscripts",
+ com.tibco.devtools.buildscripts.tasks.proguard;version="1.1.0";uses:="com.tibco.devtools.buildscripts.resources,com.tibco.devtools.buildscripts",
+ com.tibco.devtools.buildscripts.tasks.yguard;version="1.1.0";uses:="com.tibco.devtools.buildscripts.resources,com.tibco.devtools.buildscripts"
+Import-Package: com.tibco.devtools.buildscripts;version="[1.1.0,2.0.0)",
+ com.tibco.devtools.buildscripts.resources;version="[1.1.0,2.0.0)",
+ com.tibco.devtools.buildscripts.selectors;version="[1.1.0,2.0.0)",
+ com.tibco.devtools.buildscripts.tasks;version="[1.1.0,2.0.0)",
+ com.tibco.devtools.buildscripts.tasks.optional;version="[1.1.0,2.0.0)",
+ com.tibco.devtools.buildscripts.tasks.proguard;version="[1.1.0,2.0.0)",
+ com.tibco.devtools.buildscripts.tasks.yguard;version="[1.1.0,2.0.0)"
+Bundle-RequiredExecutionEnvironment: J2SE-1.5

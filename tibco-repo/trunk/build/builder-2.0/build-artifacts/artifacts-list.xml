@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<project name="builder artifacts">
+<!-- THIS IS A GENERATED FILE.  Any changes you make will be destroyed. -->
+    <property name="feature_com.tibco.devtools.builder.test" value="1.1.0.DEV-2016-03-25-0504-YANNIS" />
+    <property name="plugin_com.tibco.devtools.builder.test-obfus.tester" value="1.1.0.DEV-2016-03-25-0504-YANNIS" />
+    <property name="feature_com.tibco.devtools.builder" value="2.1.0.DEV-2016-03-25-0504-YANNIS" />
+    <property name="plugin_com.tibco.devtools.builder-com.tibco.devtools.buildscripts" value="1.1.0.DEV-2016-03-25-0504-YANNIS" />
+    <property name="plugin_com.tibco.devtools.builder-com.tibco.devtools.builder" value="2.1.0.DEV-2016-03-25-0504-YANNIS" />
+    <property name="plugin_com.tibco.devtools.builder-com.tibco.tpcl.proguard" value="5.0.0.DEV-2016-03-25-0504-YANNIS" />
+    <property name="plugin_com.tibco.devtools.builder-com.tibco.tpcl.com.yworks.yguard" value="2.5.2.DEV-2016-03-25-0504-YANNIS" />
+</project>

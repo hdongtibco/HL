@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project basedir="E:\builder-2.0" 
+         name="com.tibco.devtools.builder.test" >
+    <property name="test.flavor" 
+              value="release/eclipse" />
+</project>
